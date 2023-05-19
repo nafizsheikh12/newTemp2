@@ -28,27 +28,19 @@ const menu: {
     url: "/",
   },
   {
-    name: "About Us",
+    name: "Courses",
     url: "/about",
   },
 
   {
-    name: "Services",
+    name: "About Us",
     url: "/services",
   },
   {
-    name: "Bootcamps",
+    name: "Contact Us",
     url: "/bootcamps",
   },
 
-  {
-    name: "Consulting",
-    url: "/consulting",
-  },
-  {
-    name: "Contact",
-    url: "/contact",
-  },
 ];
 
 function classNames(...classes: any[]): string {
@@ -96,7 +88,7 @@ export default function Header() {
                     <DropDown subMenus={menuItem} />
                   ) : (
                     <Link href={menuItem?.url ? menuItem?.url : "#"}>
-                      <span className=" text-gray-500 hover:text-blue-600 cursor-pointer">
+                      <span className=" text-[#0b0b2c] hover:text-[#3434ff] transition-all cursor-pointer">
                         {menuItem.name}
                       </span>
                     </Link>
@@ -109,7 +101,7 @@ export default function Header() {
           <div className="hidden lg:flex items-center gap-2">
             {!isAuthorized(email, refresh) ? (
               <Link href="/signin">
-                <a className="px-4 py-1 bg-black text-white flex items-center gap-2 rounded">
+                <a className="px-4 py-1 bg-[#3434ff] text-white flex items-center gap-2 rounded">
                   Sign in
                 </a>
               </Link>
@@ -135,7 +127,7 @@ export default function Header() {
       >
         <Popover.Panel
           focus
-          className="absolute inset-x-0 top-0 origin-top-right transform p-2 transition lg:hidden z-50"
+          className="absolute inset-x-0 top-0 origin-top-right transform transition lg:hidden z-50"
         >
           <div className="divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
             <div className="px-5 pt-5 pb-6">
@@ -152,7 +144,7 @@ export default function Header() {
                 </div>
               </div>
             </div>
-            <div className="space-y-6  py-6 px-5">
+            <div className="space-y-6  py-6 px-5 bg-[#0B0B2C] text-white">
               <div className="grid grid-cols-1 gap-y-4 gap-x-8">
                 {menu.map((menuItem, idx) => (
                   <Link
@@ -168,7 +160,7 @@ export default function Header() {
               <div className="  flex items-center justify-between gap-2">
                 {!isAuthorized(email, refresh) ? (
                   <Link href="/signin">
-                    <a className="px-4 py-1 bg-black text-white flex items-center gap-2 rounded">
+                    <a className="px-4 py-1 bg-[#3434ff] text-white flex items-center gap-2 rounded">
                       <AiOutlinePoweroff />
                       Sign in
                     </a>
