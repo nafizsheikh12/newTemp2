@@ -9,8 +9,8 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <Service />
       <Companies />
+      <Service />
       <Bootcamps />
       <Highlights />
     </>
