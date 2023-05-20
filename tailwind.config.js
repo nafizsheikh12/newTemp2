@@ -13,7 +13,7 @@ module.exports = {
       },
       fontFamily: {
         nunito: "Nunito",
-        jakarta: "Jakarta"
+        jakarta: ['Plus Jakarta Sans', "sans-serif"]
       },
       container: {
         center: true,
