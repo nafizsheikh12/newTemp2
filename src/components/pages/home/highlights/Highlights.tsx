@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import cardImg from "../../../../assets/instructors.png";
+import people from "../../../../assets/ui/peolplestar.svg";
 import { useGetAllPublishedReviewQuery } from "../../../../feature/api/dashboardApi";
 // import "../../../../styles/testimonialsSwiperStyles.module.css";
 // import "./styles.css";
@@ -15,116 +15,69 @@ const Highlights = () => {
 
   return (
     <>
-      {isLoading ? (
-        <div>Loading...</div>
-      ) : (
-        <div className="bg-[#C1DCF9] xsm:px-[0rem] sm:px-[3rem] lg:px-[4rem] xl:px-[4rem] py-12 md:py-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-center font-nunito mb-10">
-            Student Highlights
-          </h2>
-
-          <div className="mt-10">
-            {data != null && data?.data && data?.data?.reviews ? (
-              <Marquee
-                gradientWidth={100}
-                pauseOnHover={true}
-                gradientColor={[201, 222, 246]}
-                delay={1}
-                className="max-h-[430px] overflow-hidden xsm:w-full"
-              >
-                {data?.data?.reviews
-                  .slice(0, 8)
-                  .map((option: any, index: any) => (
-                    <div
-                      key={index}
-                      className="px-[1.75rem] py-[2rem] rounded-xl bg-white   w-[300px] max-h-[390px] ml-5"
-                    >
-                      <div className="min-h-[180px]">
-                        <p className="font-nunito">
-                          {option.review.split(" ").length <= 50
-                            ? option.review
-                            : option.review.split(" ").length > 50 &&
-                              option.review.split(" ").slice(0, 50).join(" ") +
-                                "..."}
-                        </p>
-                      </div>
-                      <div className="flex items-center space-x-4 mt-[10px] min-h-[130px]">
-                        <div className="min-w-[60px] min-h-[60px]">
-                          <Image
-                            width={60}
-                            height={60}
-                            className="rounded-full"
-                            src={option?.student?.avatar}
-                            alt=""
-                          />
+       <div>
+            <div className="container mx-auto mb-10 pb-[7rem] border-b-2 bordr-gray">
+                  <div className="flex justify-between items-center ">
+                        <div>
+                             <h1 className="font-jakarta font-bold text-[35px] ">Why Learning With us?</h1>
                         </div>
-                        <div className="font-medium dark:text-white">
-                          <div className="font-bold font-nunito">
-                            {option?.student?.firstName}
-                          </div>
-                          <div className="text-sm text-gray-500 dark:text-gray-400 font-nunito">
-                            {option?.student?.email}
-                          </div>
+                        <div>
+                               <button 
+                                 className="bg-[#3434ff] text-[#ffffff] border-2 py-4 uppercase px-8 rounded font-semibold mt-5 text-[16px]"
+                               >
+                                          Our courses
+                               </button>
                         </div>
-                      </div>
-                    </div>
-                  ))}
-              </Marquee>
-            ) : (
-              ""
-            )}
-
-            {data != null && data?.data && data?.data?.review ? (
-              <div className="mt-10">
-                <Marquee
-                  gradientWidth={100}
-                  pauseOnHover={true}
-                  gradientColor={[201, 222, 246]}
-                  className="max-h-[430px] overflow-hidden xsm:w-full"
-                >
-                  {data?.data?.reviews
-                    .slice(0, 8)
-                    .map((option: any, index: any) => (
-                      <div
-                        key={index}
-                        className="px-[1.75rem] py-[2rem] rounded-xl bg-white   w-[300px] max-h-[390px] ml-5"
-                      >
-                        <div className="min-h-[180px]">
-                          <p className="font-nunito">
-                            {option?.review.split(" ").length <= 50
-                              ? option?.review + "..."
-                              : option?.review}
-                          </p>
+                  </div>
+                  <div className="pt-16">
+                        <div className="grid grid-cols-12  gap-y-24">
+                             <div className="col-span-5 flex flex-col gap-12">
+                                    <div className="flex gap-4">
+                                         <div className="w-[30%]">
+                                               <Image src={people} className="text-[5rem] w-[5rem]" width={"100%"} height={"100%"}/>
+                                         </div>
+                                         <div>
+                                              <h2 className="font-jakarta text-[29px] font-semibold mb-3">World-Class Teachers</h2>
+                                              <p className="text-[#A8A8A8] font-jakarta">Lorem ipsum dolor sit amet, consecteturirem adipiscing elit. Volutpat quis molestie tortorerm, gravida a aenean neque. Placerat</p>
+                                         </div>
+                                    </div>
+                                    <div className="flex gap-4">
+                                         <div className="w-[30%]">
+                                               <Image src={people} className="text-[5rem] w-[5rem]" width={"100%"} height={"100%"}/>
+                                         </div>
+                                         <div>
+                                              <h2 className="font-jakarta text-[29px] font-semibold mb-3">World-Class Teachers</h2>
+                                              <p className="text-[#A8A8A8] font-jakarta">Lorem ipsum dolor sit amet, consecteturirem adipiscing elit. Volutpat quis molestie tortorerm, gravida a aenean neque. Placerat</p>
+                                         </div>
+                                    </div>
+                             </div>
+                             <div className="col-span-2 flex justify-center">
+                                 <div className="dfs w-[1px] h-full bg-[#D6DDDA] rounded" style={{content:""}}></div>
+                             </div>
+                             <div className="col-span-5 flex flex-col gap-12">
+                                    <div className="flex gap-4">
+                                         <div className="w-[30%]">
+                                               <Image src={people} className="text-[5rem] w-[5rem]" width={"100%"} height={"100%"}/>
+                                         </div>
+                                         <div>
+                                              <h2 className="font-jakarta text-[29px] font-semibold mb-3">World-Class Teachers</h2>
+                                              <p className="text-[#A8A8A8] font-jakarta">Lorem ipsum dolor sit amet, consecteturirem adipiscing elit. Volutpat quis molestie tortorerm, gravida a aenean neque. Placerat</p>
+                                         </div>
+                                    </div>
+                                    <div className="flex gap-4">
+                                         <div className="w-[30%]">
+                                               <Image src={people} className="text-[5rem] w-[5rem]" width={"100%"} height={"100%"}/>
+                                         </div>
+                                         <div>
+                                              <h2 className="font-jakarta text-[29px] font-semibold mb-3">World-Class Teachers</h2>
+                                              <p className="text-[#A8A8A8] font-jakarta">Lorem ipsum dolor sit amet, consecteturirem adipiscing elit. Volutpat quis molestie tortorerm, gravida a aenean neque. Placerat</p>
+                                         </div>
+                                    </div>
+                             </div>
                         </div>
-                        <div className="flex items-center space-x-4 mt-[10px] min-h-[130px]">
-                          <div className="min-w-[60px] min-h-[60px]">
-                            <Image
-                              width={60}
-                              height={60}
-                              className="rounded-full"
-                              src={option?.student?.avatar}
-                              alt=""
-                            />
-                          </div>
-                          <div className="font-medium dark:text-white">
-                            <div className="font-bold font-nunito">
-                              {option?.student?.firstName}
-                            </div>
-                            <div className="text-sm text-gray-500 dark:text-gray-400 font-nunito">
-                              {option?.student?.email}
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                </Marquee>
-              </div>
-            ) : (
-              ""
-            )}
-          </div>
-        </div>
-      )}
+                  </div>
+            </div>
+       </div>
     </>
   );
 };

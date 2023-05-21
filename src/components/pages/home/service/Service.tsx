@@ -1,47 +1,36 @@
 import { BsFillPatchCheckFill } from "react-icons/bs";
 import { FaUserGraduate, FaUserTie } from "react-icons/fa";
 import { FiMonitor } from "react-icons/fi";
+import Image from "next/image";
+import Growmain from "../../../../assets/ui/growmain.svg"
+import grow1 from "../../../../assets/ui/grow1.svg"
+import grow3 from "../../../../assets/ui/grow3.svg"
+import grow2 from "../../../../assets/ui/growg.svg"
 
-const Service = () => {
+const Grow = () => {
   return (
-    <div className="container my-12 md:my-20 space-y-6 pb-10 px-4 sm:px-0">
-      <h3 className="text-[28px] md:text-4xl font-bold max-w-[690px] text-center mx-auto font-nunito">
-        Shaping the Future in IT, One student at a time
-      </h3>
-
-      {/* <h4 className='text-center font-bold text-2xl text-gray-800'> When you win, we win.</h4> */}
-      <div className="flex flex-wrap justify-center gap-6">
-        <div className="w-[300px] flex items-center gap-4 bg-[#FEF6E0] rounded-md px-10 py-4">
-          <FiMonitor className="font-bold text-6xl text-[#F7C32E] stroke-2" />
-          <div className="flex flex-col">
-            <span className="text-lg font-semibold font-nunito">7+</span>
-            <span className="text-xs font-nunito">Online Courses</span>
-          </div>
+    <div className="my-12 md:my-20  pb-10 bg-[#3434ff] relative">
+        <div className="container mx-auto flex justify-between pt-24 pb-24 gap-14 ">
+             <div>
+                    <h2 className="text-white font-bold font-jakarta text-[35px]">Grow your career!<br/>Start learning with us.</h2>
+                    <p className="text-[#DFDFDF] text-[18px] font-jakarta py-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit mattis.</p>
+                    <button className="bg-white text-[#3434ff] border-2 py-4 uppercase px-8 rounded font-semibold mt-5 text-[16px]">Our courses</button>
+             </div>
+             <div className="">
+                  <Image src={Growmain}/>
+                 <div className="absolute left-[78%] top-[7%] ">
+                      <Image src={grow1}/>
+                 </div>
+                 <div className="absolute top-[43%] right-[38%]">
+                        <Image src={grow2}/>
+                 </div>
+                 <div className="absolute right-[14%] top-[60%]">
+                       <Image src={grow3}/>
+                 </div> 
+             </div>
         </div>
-        <div className="w-[300px] flex items-center gap-4 bg-[#FEF6E0] rounded-md px-10 py-4">
-          <FaUserTie className="font-bold text-6xl text-[#1D3B53] stroke-2" />
-          <div className="flex flex-col">
-            <span className="text-lg font-semibold font-nunito">4+</span>
-            <span className="text-xs font-nunito">Expert Tutors</span>
-          </div>
-        </div>
-        <div className="w-[300px] flex items-center gap-4 bg-[#FEF6E0] rounded-md px-10 py-4">
-          <FaUserGraduate className="font-bold text-6xl text-[#406E95] stroke-2" />
-          <div className="flex flex-col">
-            <span className="text-lg font-semibold font-nunito">240+</span>
-            <span className="text-xs font-nunito">Online Students</span>
-          </div>
-        </div>
-        <div className="w-[300px] flex items-center gap-4 bg-[#FEF6E0] rounded-md px-10 py-4">
-          <BsFillPatchCheckFill className="font-bold text-6xl text-[#8FB6E1]" />
-          <div className="flex flex-col">
-            <span className="text-lg font-semibold font-nunito">6+</span>
-            <span className="text-xs font-nunito">Certified Courses</span>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };
 
-export default Service;
+export default Grow;
