@@ -1,6 +1,6 @@
 import CardImage3 from "../../../../assets/ServicesImages/servicesImage/167774282_m.jpg";
 import CardImage2 from "../../../../assets/ServicesImages/servicesImage/177095938_m.jpg";
-import CardImage1 from "../../../../assets/ServicesImages/servicesImage/Risk_Management+Framework(bootcamp).jpg";
+import CardImage1 from "../../../../assets/ui/cardbg.png";
 
 import { useGetAllActiveCourseQuery } from "../../../../feature/api/dashboardApi";
 import BootCampsCard from "../../bootcamps/bootCampsCard/BootCampsCard";
@@ -11,52 +11,23 @@ const Bootcamps = () => {
   );
   console.log(data);
   return (
-    <div className="mx-auto font-nunito my-12 md:my-20">
-      <div className="max-w-3xl mx-auto space-y-4 my-8">
-        <h4 className="text-xl md:text-2xl font-medium text-blue-500 text-center">
-          Fourth IT Academy
-        </h4>
-        <h3 className="text-2xl px-2 md:text-4xl font-bold text-center">
-          How our bootcamps compare to other training providers.
-        </h3>
-      </div>
-
-      <div
-        className=" mx-auto container px-5 md:px-6 lg:px-7 xl:px-0 grid grid-cols-1 gap-4 lg:gap-3  xl:gird-cols-3 lg:grid-cols-3 md:grid-cols-2 md:gap-x-5   xl:gap-7  md:gap-y-4 
-      "
-      >
-        {isSuccess &&
-          data?.data?.courses?.length > 0 &&
-          data.data.courses
-            .slice(0, 3)
-            .map(
-              (item: {
-                _id: string;
-                title: string;
-                price: number;
-                level: string;
-                courseImage: string;
-                durationInMinutes: number;
-                modules: [];
-                discountPrice: number;
-              }) => (
-                <BootCampsCard
-                  key={item._id}
-                  id={item._id}
-                  name={item.title}
-                  duration={3}
-                  cutprice={item.discountPrice}
-                  price={item.price}
-                  timeMinute={0}
-                  imgSrc={item.courseImage}
-                  timeHour={item.durationInMinutes}
-                  level={item.level}
-                  modules={item.modules.length}
-                  linkTo={item.title}
-                />
-              )
-            )}
-      </div>
+    <div className="font-jakarta my-12 md:my-20">
+          <div className="container mx-auto">
+                <div className="grid grid-cols-12 items-baseline">
+                     <div className="col-span-5">
+                           <h2 className="text-[40px] leading-[1.2em] tracking-[0.01em] text-[#0b0b2c] font-bold mb-2">Our Courses</h2>
+                           <p className="text-[#69697b] text-[18px] leading-[1.667em]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat feugiat congue viverra facilisis.</p>
+                     </div>
+                     <div className="col-span-7 flex justify-end">
+                          <a className="border-[#3434ff] text-[#3434ff] border-2 py-4 uppercase px-9 rounded font-medium text-[16px]">All courses</a>
+                     </div>
+                </div>
+                <div className="grid grid-cols-3 gap-7 mt-5">
+                     <BootCampsCard level="Beginner" description="Lorem ipsum dolor sit amet, consectere adipiscing elit. Feugiat feugiat congue viverra facilisis." name={"Brand & Identity Design for Marketers"} price={500} imgSrc={CardImage1}/>
+                     <BootCampsCard level="Beginner" description="Lorem ipsum dolor sit amet, consectere adipiscing elit. Feugiat feugiat congue viverra facilisis." name={"Brand & Identity Design for Marketers"} price={500} imgSrc={CardImage1}/>
+                     <BootCampsCard level="Beginner" description="Lorem ipsum dolor sit amet, consectere adipiscing elit. Feugiat feugiat congue viverra facilisis." name={"Brand & Identity Design for Marketers"} price={500} imgSrc={CardImage1}/>
+                </div>
+          </div>
     </div>
   );
 };
