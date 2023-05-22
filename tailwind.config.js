@@ -45,7 +45,8 @@ module.exports = {
       // => @media (min-width: 1280px) { ... }
 
       '2xl': '1536px',
-      // => @media (min-width: 1536px) { ... }
+      // => @media (min-width: 1536px) { ... }1426
+      '1xl': '1426px'
     }
   },
   plugins: [require("flowbite/plugin"), require("tailwind-scrollbar")],

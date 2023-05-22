@@ -6,7 +6,7 @@ const BrandLoader = () => {
             <Image
                 src="/logo.png"
                 alt="logo"
-                width="50"
+                width="70"
                 height="50"
                 className="animate-pulse"
             />

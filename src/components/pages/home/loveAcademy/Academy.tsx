@@ -28,7 +28,7 @@ const Academy = () => {
      }
   return (
     <div className='pb-12'>
-         <div className='container mx-auto'>
+         <div className='container mx-auto px-4 sm:px-6'>
               <div className='text-center'>
                    <h1 className='font-jakarta font-bold text-[36px] capitalize py-14'>Why student love <span className='text text-[#3434ff]'>academy</span></h1>
               </div>
@@ -41,8 +41,8 @@ const Academy = () => {
                       <div className="w-full transition-all bg-gray-200 rounded-full h-1.5 mb-4 dark:bg-gray-700">
                                  <div className={`bg-[#6132fd] h-1.5 rounded-full dark:bg-blue-500 ${borderClass}`} style={{width: "33%"}}></div>
                       </div>
-                       <div className='grid grid-cols-3 pt-8'>
-                            <div className='flex items-center justify-center cursor-pointer  gap-3' onClick={() => handleClick(1)}>
+                       <div className='grid grid-cols-1 lg:grid-cols-3 pt-8 lg:gap-0 gap-5'>
+                            <div className='flex items-center justify-start lg:justify-center cursor-pointer  gap-3' onClick={() => handleClick(1)}>
                                   <div className='w-[67px] h-[67px]'>
                                       <Image src={avatar} className="rounded-full w-[80px]" />
                                   </div>
@@ -51,7 +51,7 @@ const Academy = () => {
                                       <p className='font-jakarta text-[#69697B]'>Sec maker</p>
                                   </div>
                             </div>
-                            <div className='flex items-center justify-center cursor-pointer  gap-3' onClick={() => handleClick(2)}>
+                            <div className='flex items-center justify-start lg:justify-center cursor-pointer  gap-3' onClick={() => handleClick(2)}>
                                   <div className='w-[67px] h-[67px]'>
                                       <Image src={avatar} className="rounded-full w-[80px]" />
                                   </div>
@@ -60,7 +60,7 @@ const Academy = () => {
                                       <p className='font-jakarta text-[#69697B]'>Sec maker</p>
                                   </div>
                             </div>
-                            <div className='flex items-center justify-center cursor-pointer  gap-3' onClick={() => handleClick(3)}>
+                            <div className='flex items-center justify-start lg:justify-center cursor-pointer  gap-3' onClick={() => handleClick(3)}>
                                   <div className='w-[67px] h-[67px]'>
                                       <Image src={avatar} className="rounded-full w-[80px]" />
                                   </div>
@@ -73,7 +73,7 @@ const Academy = () => {
                    </div>
                    <div className='flex justify-center py-6 pt-16'>
                               <button 
-                                 className="bg-[#3434ff] text-[#ffffff] border-2 py-4 uppercase px-8 rounded-lg font-semibold mt-5 text-[16px]"
+                                 className="bg-[#3434ff] hover:bg-[#2e2e94] hover:text-white hover:-translate-y-2 cursor-pointer transition-all text-[#ffffff] border-2 py-4 uppercase px-8 rounded-lg font-semibold mt-5 text-[16px]"
                                >
                                          View courses
                                </button>
