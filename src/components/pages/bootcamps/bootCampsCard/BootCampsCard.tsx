@@ -5,6 +5,10 @@ import { useState } from "react";
 import { useAppSelector } from "../../../../app/hooks";
 import { useEnrollMutation } from "../../../../feature/api/dashboardApi";
 import ActionConfirmModal from "../../../utils/modals/ActionConfirmModal";
+import {MdOutlineWatchLater,MdStickyNote2} from "react-icons/md";
+import {GrNotes} from "react-icons/gr";
+import ReactStar from "react-stars"
+
 
 import {
   AiFillSignal,
@@ -46,9 +50,9 @@ const BootCampsCard = ({
         initial={{ opacity: 0 }}
         animate={{ opacity: 100 }}
         transition={{ duration: 100, ease: "linear" }}
-        className=" flex justify-center items-center font-nunito rounded-xl w-full "
+        className=" flex justify-center items-center font-nunito rounded-xl w-full col-span-12 lg:col-span-4 hover:scale-95 cursor-pointer transition-all ease-in-out"
       >
-        <div className=" bg-base-100 shadow-xl font-nunito rounded-lg w-full h-full flex flex-col">
+        <div className=" bg-base-100 shadow-xl font-nunito rounded-xl w-full h-full flex flex-col">
           <Image
             width={350}
             height={200}
@@ -57,24 +61,45 @@ const BootCampsCard = ({
             alt="Shoes"
             className="rounded-tl-xl rounded-tr-xl"
           />
-          <div className="px-4">
-            <h3 className="font-bold text-[25px] leading-9 mt-[15px] font-jakarta">
-              {name}
-            </h3>
-          </div>
-          <div className="px-4">
-               <div>
-                   <p className="text-[18px] text-[#69697b] leading-[1.667em]  font-jakarta py-4">{description}</p>
-               </div>
-               <div className="flex justify-between border-t-2 py-7">
-                    <div className="flex items-center gap-2">
-                           <AiFillSignal className="text-[#3434ff]"/>
-                           <p className="text-[18px] text-[black] font-medium leading-[1.667em]  font-jakarta">{level}</p>
-                    </div>
-                    <div>
-                          <p className="text-[21px] text-black leading-[1.1em] font-semibold"> $ {price} USD</p>
-                    </div>
-               </div>
+          <div className="px-4 py-5">
+              <div>
+                   <div className="bg-[rgba(97,50,253,0.24)] w-[23%] px-3 flex justify-center mb-4 items-center text-center rounded">
+                       <h3 className="font-jakarta font-medium text-[#6132fd]">{level}</h3>
+                   </div>
+                   <div className="mb-3">
+                      <h2 className="font-jakarta font-bold text-2xl"> {name}</h2>
+                   </div>
+                   <div className="font-jakarta text-[#828282] mb-5">
+                       {description}
+                   </div>
+                   <div className="flex justify-between items-center">
+                       <div className="flex gap-2 items-center ">
+                             <div>
+                                     <MdOutlineWatchLater className="text-[#EC455A] text-[23px] font-semibold"/>
+                             </div>
+                             <div>
+                                       <span className="font-jakarta font-semibold text-[16px]">3 Month</span>
+                              </div>
+                       </div>
+                       <div className="flex items-center gap-2">
+                             <div>
+                                   <MdStickyNote2 className="!text-[#00C2FB] text-[24px] font-semibold" />
+                             </div>
+                             <div>
+                                 <span className="font-jakarta font-semibold text-[16px]">65 Lectures</span>
+                             </div>
+                       </div>
+                   </div>
+                   <div className="flex justify-between items-center border-t-2 mt-5 border-[#CECECE] pt-5">
+                          <div className="flex justify-between gap-2 items-center">
+                                  <ReactStar   size={24} value={5} edit={false} half={true} />
+                                  <span className="text-[#8A92A6] font-semibold font-jakarta">5.0</span>
+                          </div>
+                          <div>
+                               <button className="bg-[#6132fd] text-white px-4 py-2 font-medium font-jakarta rounded">Enroll now</button>
+                          </div>
+                   </div>
+              </div>
           </div>
             
         </div>

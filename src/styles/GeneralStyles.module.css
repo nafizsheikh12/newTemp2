@@ -58,11 +58,36 @@
 }
 .SigninBg{
   background-image: 
-    url("../assets/Hopemain.svg");
+    url("../assets/ui/signbg.png");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: left center;
 }
+
+.registerBg{
+  background-image: 
+    url("../assets/ui/signbg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left center;
+}
+.registerBg::before {
+  content: "";
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background: #12111161;
+    top: 0;
+}
+.SigninBg::before {
+  content: "";
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background: #12111161;
+    top: 0;
+}
+
 .lessonBg{
   background-image: 
   url("../assets/pexels-vlada-karpovich-4050333.png");
