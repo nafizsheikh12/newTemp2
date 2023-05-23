@@ -1,6 +1,5 @@
 import { useForm } from "react-hook-form";
 import Textfield from "../../../../common/forms/Textfield";
-import { SelectOptions } from "../../BottomRegisForm";
 import { useFormContext } from "react-hook-form";
 import { BsFillEnvelopeFill } from "react-icons/bs";
 import { InputErrorMessage } from "../../../../utils/error";

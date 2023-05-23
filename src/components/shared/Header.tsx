@@ -29,16 +29,16 @@ const menu: {
   },
   {
     name: "Courses",
-    url: "/about",
+    url: "/courses",
   },
 
   {
     name: "About Us",
-    url: "/services",
+    url: "/about",
   },
   {
     name: "Contact Us",
-    url: "/bootcamps",
+    url: "/contact",
   },
 
 ];

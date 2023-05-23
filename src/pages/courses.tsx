@@ -1,22 +1,20 @@
 import Head from "next/head";
 import React from "react";
 import HomeLayout from "../components/layouts/HomeLayout";
-
 import dynamic from "next/dynamic";
+import CoursesPage from "../components/pages/courses/Courses";
 
-const ContactUs = dynamic(() => import("../components/pages/contact/Contact"));
-
-const Contact = () => {
+const Courses = () => {
   return (
     <>
       <Head>
-        <title>Contact | Fourth IT Academy</title>
+        <title>Courses | Fourth IT Academy</title>
       </Head>
       <HomeLayout>
-        <ContactUs />
+        <CoursesPage />
       </HomeLayout>
     </>
   );
 };
 
-export default dynamic(() => Promise.resolve(Contact), { ssr: false });
+export default dynamic(() => Promise.resolve(Courses), { ssr: false });
