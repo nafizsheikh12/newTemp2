@@ -163,7 +163,7 @@ const SigninForm = () => {
                            <label htmlFor="passowrd" className="relative text-gray-400 focus-within:text-gray-600 block">
                                   <input 
                                     type="password"
-                                    placeholder="name@flowbite.com"
+                                    placeholder="Password"
                                     className="w-full bg-white border-[#6132fd] rounded-md border-1"
                                     {...register("password",{required:true})}
                                   />
