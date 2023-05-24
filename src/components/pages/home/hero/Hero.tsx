@@ -21,10 +21,10 @@ const Hero = () => {
            <div className="container px-4  mx-auto relative">
               <div className="grid grid-cols-12 lg:grid-cols-12 gap-4 lg:gap-[100px] items-center relative pb-10 ">
                 
-                         <div className="col-span-12 z-20 mb-14 lg:mb-0 lg:col-span-7 text-center lg:text-left">
+                         <div  data-aos-delay="5000" data-aos="fade-down" className="col-span-12 z-20 mb-14 lg:mb-0 lg:col-span-7 text-center lg:text-left">
                               <h1 data-aos-delay="5000" data-aos="fade-down" className="text-[#0b0b2c] text-[52px] lg:text-[74px] font-bold font-jakarta leading-[58px] lg:leading-[85px]">Grow your skills,<br/><span className="text-[#3434ff]">Define your future.</span></h1>
                               <p  data-aos-delay="5000" data-aos="fade-down" className="text-[#69697b] text-[18px] font-normal leading-[1.667em] mb-9 font-jakarta my-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra tristique laoreet ut elementum cras cursus. Morbi morbi at diam.</p>
-                              <button  data-aos-delay="5000" data-aos="fade-down" className="bg-[#3434ff] px-12 py-5 rounded uppercase text-white text-[18px] font-m font-jakarta cursor-pointer z-10 hover:-translate-y-3	 hover:!bg-[#20228b] transition-all">View Courses</button>
+                              <button  className="bg-[#3434ff] px-12 py-5 rounded uppercase text-white text-[18px] font-m font-jakarta cursor-pointer z-10 hover:-translate-y-3	 hover:!bg-[#20228b] transition-all">View Courses</button>
                          </div>
                
                        <div className="col-span-12 lg:col-span-5 text-center">
