@@ -5,8 +5,8 @@ import MainRegister from "./mainRegister/MainRegister";
 const Registration = () => {
   return (
     <>
-       <div className={`${GeneralStyles.registerBg} pb-4 min-h-screen bg-[#E5E5E5] relative`}>
-            <div className="z-20 container mx-auto pt-5 relative">
+       <div className={`${GeneralStyles.registerBg} pb-4 min-h-screen bg-[#E5E5E5] relative  py-8`}>
+            <div className="z-20 px-4 sm:px-12 lg:px-48 py-8 container mx-auto relative ">
                    <MainRegister />
             </div>
         </div>

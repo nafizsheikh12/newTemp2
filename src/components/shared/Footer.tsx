@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import { BsLinkedin } from "react-icons/bs";
 import { GrTwitter } from "react-icons/gr";
 import { FaFacebookF } from "react-icons/fa";
@@ -8,10 +8,14 @@ import msgIcon from "../../assets/ui/msg.svg"
 import stripe from "../../assets/ui/stripe.svg"
 import paypal from "../../assets/ui/paypal.svg"
 import Image from "next/image";
-import {Accordion } from "flowbite-react"
+import {Accordion } from "flowbite-react";
+import Aos from "aos"
 
 
 const Footer = () => {
+  useEffect(() => {
+       Aos.init();
+     }, [])   
   return (
     <>
        <div className="my-9 overflow-hidden px-4 sm:px-6">
@@ -72,7 +76,7 @@ const Footer = () => {
                 }
                 <div className="grid grid-cols-12">
                      <div className="col-span-12 text-center lg:text-left lg:col-span-3">
-                         <div>
+                         <div data-aos-delay="5000" data-aos="fade-down">
                                <h2 className="font-jakarta font-bold text-2xl">ilearnaskill</h2>
                                <div className="flex gap-5 justify-center lg:justify-start mt-4">
                                     <div className="border-[#ececf4] p-[6px] rounded-full border-2">
@@ -91,7 +95,7 @@ const Footer = () => {
                          </div>
                      </div>
                   
-                     <div className="col-span-6 lg:block hidden">
+                     <div data-aos-delay="5000" data-aos="fade-right" className="col-span-6 lg:block hidden">
                           <h2 className="font-jakarta font-semibold pb-4 text-[#3434ff] uppercase">Pages</h2>
                            <div className="grid grid-cols-3">
                                    <ul className="text-[#69697b] font-semibold">
@@ -115,7 +119,7 @@ const Footer = () => {
                                   </ul>
                            </div>
                      </div>
-                     <div className="col-span-3 ml-auto hidden lg:block">
+                     <div data-aos-delay="5000" data-aos="fade-right" className="col-span-3 ml-auto hidden lg:block">
                           <h2 className="font-jakarta font-semibold pb-4 text-[#3434ff] uppercase">Utility pages</h2>
                           <ul className="text-[#69697b] font-semibold">
                               <li  className="mb-3">Styleguide</li>
@@ -127,7 +131,7 @@ const Footer = () => {
                           </ul>
                      </div>
                 </div>
-                <div className="lg:mt-24 mt-8  border-[#ececf4] border-b-2 pb-11">
+                <div data-aos-delay="5000" data-aos="fade-down" className="lg:mt-24 mt-8  border-[#ececf4] border-b-2 pb-11">
                     <div className="flex justify-between flex-col lg:flex-row items-center">
                          <div className="flex mb-6 lg:mb-0 flex-col lg:flex-row justify-center items-center gap-3">
                               <div className="shadow-xl pl-[5px] border-2  w-[70px] h-[70px]  flex items-center justify-center rounded-full">
@@ -144,7 +148,7 @@ const Footer = () => {
                          </div>
                     </div>
                 </div>
-                <div className="pt-20">
+                <div data-aos-delay="5000" data-aos="fade-down" className="pt-20">
                     <div className="flex justify-between flex-col lg:flex-row">
                          <div className="text-center">
                               <p className="text-[#69697b] font-jakarta text-[16px] mb-3 lg:mb-0 md:text-lg font-medium">Copyright © Academy | Designed by <span className="text-[#3434ff]">BRIX Templates</span> - Powered by <span className="text-[#3434ff]">Webflow</span></p>

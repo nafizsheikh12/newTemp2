@@ -84,13 +84,13 @@ const AsideBar = () => {
             <a className="flex justify-center items-center gap-2 ">
               <Image
                 src={logo}
-                width={35}
-                height={35}
+                width={60}
+                height={40}
                 className="h-5 w-6"
                 alt={"logo"}
               />
 
-              <span className="uppercase font-semibold text-2xl">FITA</span>
+              <span className="uppercase font-semibold text-lg">FITA</span>
             </a>
           </Link>
         </div>

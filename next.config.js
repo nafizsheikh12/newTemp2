@@ -22,7 +22,6 @@ const nextConfig = {
         protocol: "https",
         hostname: "cdn.britannica.com",
       },
-      
     ]
   },
   eslint: {

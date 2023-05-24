@@ -8,7 +8,7 @@ import IncludesCard from "./rightCard/IncludesCard";
 import ModalVideo from "react-modal-video";
 import "react-modal-video/css/modal-video.css";
 import Tags from "./rightCard/Tags";
-import TopFormRegistration from "../../registration/TopFormRegistration";
+import TopFormRegistration from "../../signin/SigninForm1";
 import {Spinner} from "flowbite-react"
 
 const ViewBootcamp = () => {

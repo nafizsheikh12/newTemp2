@@ -51,7 +51,7 @@ export default function Header() {
   const {
     user: { email, avatar, firstName },
     refresh,
-  } = useAppSelector((state) => state.auth);
+  } = useAppSelector((state:any) => state.auth);
 
   return (
     <Popover className="relative bg-white font-nunito">
@@ -59,7 +59,7 @@ export default function Header() {
         <div className="flex items-center justify-between border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
           <div className="flex justify-start basis-1/2 lg:w-0 sm:basis-1/12">
             <Link href="/">
-              <div className="flex gap-2 items-center min-w-max">
+              <div className="flex cursor-pointer gap-2 items-center min-w-max">
                 <Image
                   width={60}
                   height={40}

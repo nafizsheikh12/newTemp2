@@ -25,16 +25,19 @@ const LiveLeftVideoOptions = () => {
   return (
    <>
     <div
-      className={`${generalStyle.liveBG} w-full h-[600px]  pr-5 lg:pr-0 pt-8  font-nunito`}
+      className={` w-full  pr-5 lg:pr-0 pt-8  font-nunito`}
     >
-      <div className="relative -mt-16 ">
+      <div className="flex justify-center ">
+       {/* 
         <Image width={170} height={170} alt="" src={teacher} />
         <div className="absolute top-4  bg-white px-2 py-1 rounded flex items-center ">
           <span className="inline-block bg-[#DD0000] w-3 h-3 rounded-full"></span>
           <span className="text-[15px] font-bold title-clr">LIVE</span>
           <span className="text-small-text-color">20:35</span>
         </div>
-        <div className="flex items-center space-x-3 absolute  left-[50%] -translate-x-[50%] lg:translate-y-[550%] translate-y-[350%] md:translate-y-[550%]  bg-white px-5 py-2 shadow rounded">
+         */
+        }
+        <div className="flex items-center gap-3 w-[28rem] bg-white px-5 py-2 shadow rounded">
           <div>
             <Image alt="" className="rounded" src={meetData?.data?.meets?.slice(-1)[0]?.createdBy?.avatar} width={50} height={50} />
           </div>
@@ -45,7 +48,7 @@ const LiveLeftVideoOptions = () => {
         </div>
       </div>
     </div> 
-    <div className="pt-[100px] pb-[100px] lg:pb-[150px] flex justify-center space-x-5">
+    <div className="pt-[36px] pb-[100px] lg:pb-[150px] flex justify-center space-x-5">
       <StartClass show={moduleModalShow} setShowModal={setmoduleModalShow}/>
       <JoinClass show={joinclass} setShowModal={setjoinclass}/>
       <button disabled={roles.includes("student")} className="text-center" onClick={handleClick}>

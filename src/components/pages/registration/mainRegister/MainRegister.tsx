@@ -15,46 +15,39 @@ import Step3 from './fromStep/Step3';
 import Success from "./fromStep/Success"
 
 
-export type InitialFormDataCourse = {
-  title: string,
-  shortDescription: string,
-  category: string,
-  language:string,
-  durationInMinutes: number,
-  price: number,
-  level: string,
-  featured?: boolean,
-  numberOfLectures: number,
-  discountPrice: number,
-  isDiscount?: boolean,
-  description: string,
-  courseImage:string,
-  videoUrl:string,
-  tags:string[],
-  msgtoreviewer:string
-}
+export type InitialFormData = {
+  title: string;
+  firstName: string;
+  lastName: string;
+  email: string;
+  phone: string;
+  state: string;
+  country: string;
+  currentJob: string;
+  studentType: string;
+  highestStudy: string;
+  knowFrom: string;
+  agree?: boolean;
+};
 
-const InitialFormDataCourse = {
+const initialFormData = {
   title: "",
-  shortDescription: "",
-  category: "",
-  language: "",
-  durationInMinutes: 0,
-  price: 0,
-  level: "",
-  featured: false,
-  numberOfLectures: 0,
-  discountPrice: 0,
-  isDiscount: false,
-  description: "",
-  courseImage:"",
-  videoUrl:"",
-  msgtoreviewer:"",
-  tags:[]
-}
+  firstName: "",
+  lastName: "",
+  email: "",
+  phone: "",
+  state: "",
+  country: "",
+  currentJob: "",
+  studentType: "",
+  highestStudy: "",
+  knowFrom: "",
+  agree: false,
+};
+
 
 const CourseCreationMain = () => {
-  const [formData, setFormData] = useState<InitialFormDataCourse>(InitialFormDataCourse);
+  const [formData, setFormData] = useState<InitialFormData>(initialFormData);
   
   // console.log("form data", formData);
   const [step,setStep] = useState(1);
@@ -110,9 +103,12 @@ const CourseCreationMain = () => {
          )}
          <div className='pt-8 px-14'>
          {
-           step === 1 ? <Step onNext={onNext} /> : 
-           step === 2 ? <Step2 onNext={onNext}/> : 
-           step === 3 && <Step3  onNext={onNext}/>             
+           step === 1 ? <Step onNext={onNext}  setFormData={setFormData} formData={formData}/> : 
+           step === 2 ? <Step2 onNext={onNext}  setFormData={setFormData} formData={formData}/> : 
+           step === 3 && <Step3 setStep={setStep} step={step}  onNext={onNext} setFormData={setFormData} formData={formData}/>             
+         }
+         {
+            step === 4 && <Success /> 
          }
         </div>
 

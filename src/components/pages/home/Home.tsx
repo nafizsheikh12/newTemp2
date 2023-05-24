@@ -7,8 +7,16 @@ import Companies from "./copmanies/index";
 import PathSection from "./path/PathSection";
 import About from "./about/About";
 import LoveAcademy from "./loveAcademy/Academy"
+import Aos from "aos";
+import react,{useEffect} from "react"
+import "aos/dist/aos.css";
 
 export default function Home() {
+  
+  useEffect(() => {
+    Aos.init();
+  }, [])
+  
   return (
     <>
       <Hero />

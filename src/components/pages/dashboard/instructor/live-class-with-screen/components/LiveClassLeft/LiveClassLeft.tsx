@@ -7,11 +7,6 @@ import LiveSharingOption from "./../../partials/live-sharing-option";
 const LiveClassLeft = () => {
   return (
     <div>
-      <LiveLeftHeader />
-      <div className="flex items-center justify-center">
-        <LiveSharingOption />
-      </div>
-     
       <LiveLeftVideoOptions />
     </div>
   );
