@@ -232,7 +232,7 @@ const About = () => {
                                   <div  className="lg:w-[94%] 1xl:w-[100%]">
                                       <Image src={Growmain}/>
                                   </div>
-                                 <div data-aos-duration="10000" data-aos="fade-down" className="lg:top-[12%] top-[60%] right-[-3%] w-[31%] lg:w-[13%] lg:right-[-1%]   absolute 1xl:right-[-5%] 1xl:top-[7%] ">
+                                 <div data-aos-delay="10000" data-aos="fade-down" className="lg:top-[12%] top-[60%] right-[-3%] w-[31%] lg:w-[13%] lg:right-[-1%]   absolute 1xl:right-[-5%] 1xl:top-[7%] ">
                                       <Image src={grow1}/>
                                  </div>
                                  <div data-aos-duration="10000" data-aos="fade-down" className="w-[16%] right-[83%] top-[74%] absolute 1xl:w-[12%] lg:w-[10%] lg:top-[37%] lg:right-[30%] 1xl:top-[43%] 1xl:right-[30%]">

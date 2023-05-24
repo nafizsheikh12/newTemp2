@@ -92,12 +92,12 @@ const Step = (props:any) => {
                </div>
                <div className='py-4 pt-8 mb-5'> 
                      <label className='font-jakarta font-semibold'>Full Name</label>
-                     <div className='flex gap-5 justify-between pt-2'>
-                          <div className='w-[50%]'>
+                     <div className='flex flex-col md:flex-row gap-5 justify-between pt-2'>
+                          <div className='w-full md:w-[50%]'>
                                <input  {...register("firstName", { required: true })} type='text' placeholder='Enter first name' className='w-full px-3 border-[#CED4DA] rounded-md py-4'/>
                                {errors.firstName && <InputErrorMessage message={"Select your first name"} />}
                           </div>
-                          <div className='w-[50%]'>
+                          <div className='w-full md:w-[50%]'>
                                <input  {...register("lastName", { required: true })} type='text' placeholder='Enter last name' className='w-full px-3 border-[#CED4DA] rounded-md py-4'/>
                                {errors.lastName && <InputErrorMessage message={"Select your last name"} />}
                           </div>
@@ -110,8 +110,8 @@ const Step = (props:any) => {
                           {errors.email && <InputErrorMessage message={"Enter your email"} />}
                      </div>
                </div>
-               <div className='flex gap-5 justify-between mt-5'>
-                   <div className='w-[50%]'>
+               <div className='flex flex-col md:flex-row gap-5 justify-between mt-5'>
+                   <div className='w-full md:w-[50%]'>
                          <label className='font-jakarta font-semibold'>Country</label>
                          <select  {...register("country", { required: true })} className='w-full px-3 mt-2 border-[#CED4DA] rounded-md py-4'>
                               <option value={""}>{"Select Your Country"}</option>
@@ -317,7 +317,7 @@ const Step = (props:any) => {
                          </select>
                          {errors.country && <InputErrorMessage message={"Select your country"} />}
                    </div>
-                   <div className='w-[50%]'>
+                   <div className='w-full md:w-[50%]'>
                          <label className='font-jakarta font-semibold'>State</label>
                          <select  {...register("state", { required: true })} className='w-full px-3 mt-2 border-[#CED4DA] rounded-md py-4'>
                               <option value={""}>{"Select Your State"}</option>
