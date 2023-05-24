@@ -77,8 +77,8 @@ export default function Example() {
               <div className="flex h-16 items-center justify-between">
                 <div className="flex items-center divide-x-2">
                   <div className="flex-shrink-0 pr-3">
-                    <Link href="/">
-                      <a>Home</a>
+                    <Link href="/dashboard">
+                      <a>Dashboard</a>
                     </Link>
                   </div>
                   <div className=" px-3">

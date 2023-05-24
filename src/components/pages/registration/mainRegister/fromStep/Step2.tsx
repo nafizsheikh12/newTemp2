@@ -1,90 +1,85 @@
-import React from 'react'
+import React from 'react';
+import { useForm } from "react-hook-form";
+import { InputErrorMessage } from "../../../../utils/error/index";
+import { Dispatch, SetStateAction } from "react";
+import {InitialFormData} from "../MainRegister";
+
+export type StepProps = {
+      setFormData: Dispatch<SetStateAction<InitialFormData>>;
+      formData: InitialFormData;
+};
+
+type RegistrationFirstStepFromData = {
+      currentJob: string;
+      knowFrom: string;
+      highestStudy: string;
+    }
 
 const Step2 = (props:any) => {
-  const {onNext} = props
+      const {onNext, setFormData, formData} = props
+
+      const {
+        register,
+        handleSubmit,
+        formState: { errors },
+      } = useForm<RegistrationFirstStepFromData>({
+        defaultValues: {
+            currentJob: formData.currentJob,
+            knowFrom: formData.knowFrom,
+            highestStudy: formData.highestStudy,
+        },
+        // resolver: zodResolver(registrationFirstStepFromSchema)
+      });
+  
+      const submitSecondStep = (data: RegistrationFirstStepFromData) => {
+        setFormData((prev:any) => ({ ...prev, ...data }));
+        onNext();
+      };
   return (
     <div>
         <div>
-             <form>
+             <form onSubmit={handleSubmit(submitSecondStep)}>
+                   <div className='mb-5 mt-5'>
+                         <label className='font-jakarta font-semibold'>What Is Your Current Job?</label>
+                         <input  {...register("currentJob", { required: true })} className='w-full px-3 mt-2 border-[#CED4DA] rounded-md py-4' type='text' placeholder='What Is Your Current Job'/>
+                         {errors.currentJob && <InputErrorMessage message={"What Is Your Current Job?"} />}
+                   </div>
                   <div>
-                         <div className="">
-                                    <p className="font-bold mb-2">Highest Level of Education Completed</p>
+                                 <div className="">
+                                    <p className="font-bold mb-2">Highest Level of Education</p>
                                   </div>
-                                  <div className="pt-1 flex items-center gap-12">
-                                      <div>
-                                        <input
-                                          type="radio"
-                                          id="yes"
-                                          value="Yes"
-                                        />
-                                          <label htmlFor="yes">Yes</label>
-                                      </div>
-                                      <div className="xl:mx-2 lg:mx-2 md:mx-2 sm:mx-2 xsm:mx-2">
-                                         <input
-                                           type="radio"
-                                           id="no"
-                                           value="no"
-                                         />{" "}
-                                         <label htmlFor="no">No</label>
-                                       </div>
-                                  </div>   
-                    </div>
-                    <div className='flex gap-5 justify-between mt-5'>
-                          <div className='w-[50%]'>
-                                <label className='font-jakarta font-semibold'>Field of Study</label>
-                                <input type='text' className='w-full px-3 mt-2 border-[#CED4DA] rounded-md py-4' placeholder='Enter field of study'/>
-                          </div>
-                          <div className='w-[50%]'>
-                               <label className='font-jakarta font-semibold'>Degrees or Certifications</label>
-                               <input className='w-full px-3 mt-2 border-[#CED4DA] rounded-md py-4' type='text' placeholder='Enter Degrees or Certification'/>
-                          </div>
-                    </div>
-                    <div className='flex gap-5 justify-between mt-5'>
-                          <div className='w-[50%]'>
-                                <label className='font-jakarta font-semibold'>Field of Study</label>
-                                <input type='text' className='w-full px-3 mt-2 border-[#CED4DA] rounded-md py-4' placeholder='Enter field of study'/>
-                          </div>
-                          <div className='w-[50%]'>
-                               <label className='font-jakarta font-semibold'>Degrees or Certifications</label>
-                               <input className='w-full px-3 mt-2 border-[#CED4DA] rounded-md py-4' type='text' placeholder='Enter Degrees or Certification'/>
-                          </div>
-                    </div>
-                    <div className='flex gap-5 justify-between mt-5'>
-                          <div className='w-[50%]'>
-                                <label className='font-jakarta font-semibold'>Current Job Title</label>
-                                <input type='text' className='w-full px-3 mt-2 border-[#CED4DA] rounded-md py-4' placeholder='Enter current job title'/>
-                          </div>
-                          <div className='w-[50%]'>
-                               <label className='font-jakarta font-semibold'>Industry or Sector</label>
-                               <input className='w-full px-3 mt-2 border-[#CED4DA] rounded-md py-4' type='text' placeholder='Enter industry or sector'/>
-                          </div>
-                    </div>
-                    <div className='flex gap-5 justify-between mt-5'>
-                          <div className='w-[50%]'>
-                                <label className='font-jakarta font-semibold'>Years of Experience</label>
-                                <input type='text' className='w-full px-3 mt-2 border-[#CED4DA] rounded-md py-4' placeholder='Enter company name'/>
-                          </div>
-                          <div className='w-[50%]'>
-                               <label className='font-jakarta font-semibold'>Company Name</label>
-                               <input className='w-full px-3 mt-2 border-[#CED4DA] rounded-md py-4' type='text' placeholder='Enter Degrees or Certification'/>
-                          </div>
-                    </div>
-                    <div className='flex gap-5 justify-between mt-5'>
-                          <div className='w-[50%]'>
-                                <label className='font-jakarta font-semibold'>Learning Interests</label>
-                                <input type='text' className='w-full px-3 mt-2 border-[#CED4DA] rounded-md py-4' placeholder='Enter learning experience'/>
-                          </div>
-                          <div className='w-[50%]'>
-                               <label className='font-jakarta font-semibold'>Career Goals</label>
-                               <input className='w-full px-3 mt-2 border-[#CED4DA] rounded-md py-4' type='text' placeholder='Enter career goals'/>
-                          </div>
+                                  <select  {...register("highestStudy", { required: true })} className='w-full px-3 mt-2 border-[#CED4DA] rounded-md py-4'>
+                                  <option value={""}>Highest level of education</option>
+                                  {
+                                    ["Some high school",
+                                    "High school diploma or GED",
+                                    "Bachelor's degree ",
+                                    "Some graduate coursework",
+                                    "Graduate degree"
+                                    ].map((val:any,id:any) => (
+                                          <option key={id}>
+                                                {val}
+                                          </option>
+                                    ))
+                                  }
+                                </select>
+                                {errors.highestStudy && <InputErrorMessage message={"Select Highest level of education"} />}
                     </div>
                     <div className='mb-5 mt-5'>
-                          <label className='font-jakarta font-semibold'>Preferred Course Topics</label>
-                          <input className='w-full px-3 mt-2 border-[#CED4DA] rounded-md py-4' type='text' placeholder='Enter preferred course topics'/>
+                          <label className='font-jakarta font-semibold'>how Did You Hear About Us?</label>
+                           <select  {...register("knowFrom", { required: true })} className='w-full px-3 mt-2 border-[#CED4DA] rounded-md py-4'>
+                                  <option value={""}>How Did You Hear About Us</option>
+                                  {
+                                    ["Twitter","Facebook","Linkedin","Others"].map((val:any,id:any) => (
+                                          <option key={id}>
+                                                {val}
+                                          </option>
+                                    ))
+                                  }
+                           </select>
                     </div>
                     <div className='w-full'>
-                          <button onClick={onNext} className='bg-[#6132fd] font-jakarta font-medium w-full capitalize text-white px-5 py-3 rounded-md'>Next Step</button>
+                          <button type='submit' className='bg-[#6132fd] font-jakarta font-medium w-full capitalize text-white px-5 py-3 rounded-md'>Next Step</button>
                     </div>
              </form>
         </div>

@@ -128,7 +128,7 @@ const SigninForm = () => {
 
   return (
     <form
-      className="rounded-2xl shadow-2xl  mt-44 w-full mx-1 sm:mx-5 max-w-[28rem] bg-white p-5 relative font-nunito"
+      className="rounded-2xl shadow-2xl   w-full  max-w-[28rem] bg-white p-5 relative font-nunito"
       onSubmit={handleSubmit(handleSignin)}
     >
          <div className="px-4">

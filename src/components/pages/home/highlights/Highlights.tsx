@@ -19,10 +19,11 @@ const Highlights = () => {
             <div className="container mx-auto mb-10 pb-[7rem] border-b-2 bordr-gray">
                   <div className="flex flex-col lg:flex-row justify-between items-center ">
                         <div>
-                             <h1 className="font-jakarta font-bold text-[30px] sm:text-[35px] ">Why Learning With us?</h1>
+                             <h1 data-aos-delay="5000" data-aos="fade-down" className="font-jakarta font-bold text-[30px] sm:text-[35px] ">Why Learning With us?</h1>
                         </div>
                         <div>
                                <button 
+                                 data-aos-delay="5000" data-aos="fade-down"
                                  className="bg-[#3434ff] hover:bg-[#3030b1] hover:text-white hover:-translate-y-2 cursor-pointer transition-all text-[#ffffff] border-2 py-4 uppercase px-8 rounded-md font-semibold mt-5 text-[16px]"
                                >
                                           Our courses
@@ -30,7 +31,7 @@ const Highlights = () => {
                         </div>
                   </div>
                   <div className="pt-16">
-                        <div className="grid grid-cols-12  gap-y-24">
+                        <div data-aos-delay="5000" data-aos="fade-down" className="grid grid-cols-12  gap-y-24">
                              <div className="col-span-12 lg:col-span-5 flex flex-col gap-12">
                                     <div className="flex flex-col items-center lg:items-start text-center justify-center lg:flex-row lg:text-left gap-4">
                                          <div className="w-[30%]">

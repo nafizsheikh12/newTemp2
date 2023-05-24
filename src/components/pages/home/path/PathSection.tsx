@@ -9,11 +9,11 @@ const PathSection = () => {
     <div>
         <div className='px-4 sm:px-6 '>
               <div className='container mx-auto text-center'>
-                   <h2 className='text-[35px] mb-3 lg:text-[40px] font-jakarta font-semibold'>Choose Your Path</h2>
-                   <p className='text-[#69697B] text-[18px] font-jakarta'>Choose how would you like to learn on Academy. You can study full or part-time <br/> in our local programs, or remotely with our online courses.</p>
+                   <h2 data-aos-delay="5000" data-aos="fade-down" className='text-[35px] mb-3 lg:text-[40px] font-jakarta font-semibold'>Choose Your Path</h2>
+                   <p data-aos-delay="5000" data-aos="fade-down" className='text-[#69697B] text-[18px] font-jakarta'>Choose how would you like to learn on Academy. You can study full or part-time <br/> in our local programs, or remotely with our online courses.</p>
               </div>
               <div className='container mx-auto py-14'>
-                   <div className='grid grid-cols-1 lg:grid-cols-3 gap-9'>
+                   <div data-aos-delay="5000" data-aos="fade-down" className='grid grid-cols-1 lg:grid-cols-3 gap-9'>
                          <div className='text-center'>
                              <div>
                                     <Image src={pathBg}/>
