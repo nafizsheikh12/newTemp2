@@ -51,7 +51,7 @@ const Courses = () => {
                               />
                             )
                           ):
-                            <div>No course found</div>
+                            <div className='col-span-12 text-center'>No course found</div>
                         
                         }
                </div>
