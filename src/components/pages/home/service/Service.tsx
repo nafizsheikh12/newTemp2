@@ -11,10 +11,10 @@ const Grow = () => {
   return (
     <div className="my-12 px-4 sm:px-6 md:my-20  pb-10 bg-[#3434ff] ">
         <div className="relative container  mx-auto flex-col lg:flex-row text-center lg:text-left flex justify-between pt-24 pb-24 gap-14 ">
-             <div className="text-center mb-20 lg:mb-0 lg:text-left">
+             <div data-aos-delay="5000" data-aos="fade-down" className="text-center mb-20 lg:mb-0 lg:text-left">
                     <h2 data-aos-delay="5000" data-aos="fade-down" className="text-white font-bold font-jakarta text-[35px]">Grow your career!<br/>Start learning with us.</h2>
                     <p data-aos-delay="5000" data-aos="fade-down" className="text-[#DFDFDF] text-[18px] font-jakarta py-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit mattis.</p>
-                    <button data-aos-delay="5000" data-aos="fade-down" className="bg-white text-[#3434ff] border-2 py-4 uppercase px-8 rounded font-semibold mt-5 text-[16px] hover:bg-[#3434ff] hover:text-white hover:-translate-y-2 cursor-pointer transition-all">Our courses</button>
+                    <button  className="bg-white text-[#3434ff] border-2 py-4 uppercase px-8 rounded font-semibold mt-5 text-[16px] hover:bg-[#3434ff] hover:text-white hover:-translate-y-2 cursor-pointer transition-all">Our courses</button>
              </div>
              <div className="">
                   <div className="lg:w-[94%] 1xl:w-[100%]">
