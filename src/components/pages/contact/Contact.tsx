@@ -25,7 +25,7 @@ const Contact = () => {
                    </p>
               </div>
               <div data-aos-delay="5000" data-aos="fade-down" className="grid grid-cols-1 lg:grid-cols-3  gap-8 pt-20 border-b-[1px] border-[#D6DDDA] pb-24">
-                    <div className="shadow-xl p-7 py-5 rounded-lg">
+                    <div className="cursor-pointer hover:scale-95 transition-all shadow-xl p-7 py-5 rounded-lg">
                            <h3 className='font-jakarta text-[27px] font-bold mb-5'>Phone</h3>
                            <div>
                                 <h4 className='font-jakarta uppercase text-[17px] font-semibold text-[#3434ff] '>Sanfransicisco</h4>
@@ -36,7 +36,7 @@ const Contact = () => {
                                 <h4 className='font-jakarta text-[23px] font-semibold '>(415)701 - 3234</h4>
                            </div>
                     </div>
-                    <div className="shadow-xl p-7 py-5 rounded-lg">
+                    <div className="cursor-pointer hover:scale-95 transition-all shadow-xl p-7 py-5 rounded-lg">
                            <h3 className='font-jakarta text-[27px] font-bold mb-5'>Phone</h3>
                            <div>
                                 <h4 className='font-jakarta uppercase text-[17px] font-semibold text-[#3434ff] '>Sanfransicisco</h4>
@@ -47,7 +47,7 @@ const Contact = () => {
                                 <h4 className='font-jakarta text-[23px] font-semibold '>(415)701 - 3234</h4>
                            </div>
                     </div>
-                    <div className="shadow-xl p-7 py-5 rounded-lg">
+                    <div className="cursor-pointer hover:scale-95 transition-all shadow-xl p-7 py-5 rounded-lg">
                            <h3  className='font-jakarta text-[25px] font-bold mb-5'>Social Media</h3>
                            <div>
                                 <div className="flex items-center gap-2 mb-5">

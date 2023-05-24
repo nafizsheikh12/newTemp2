@@ -103,7 +103,7 @@ const BootCampsCard = ({
                           <div>
                                {
                                  isAuthorized(email, refresh) ?
-                                 <button  onClick={() => setShowEnrollConfirmModal(true)} className="bg-[#6132fd] text-white px-4 py-2 font-medium font-jakarta rounded">Enroll now</button> :
+                                !roles.includes("instructor") && <button  onClick={() => setShowEnrollConfirmModal(true)} className="bg-[#6132fd] text-white px-4 py-2 font-medium font-jakarta rounded">Enroll now</button> :
                                  <button  className="bg-[#6132fd] text-white px-4 py-2 font-medium font-jakarta rounded">
                                      <Link href={"/signin"}>
                                         Register

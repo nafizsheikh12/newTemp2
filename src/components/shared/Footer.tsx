@@ -144,7 +144,7 @@ const Footer = () => {
                          </div>
                          <div className="flex gap-4 flex-col sm:flex-row">
                               <input type="text" placeholder="Enter your email" className="py-3  text-[#69697b] sm:w-[21rem] rounded border-[#cfcfdb]"/>
-                               <a className="bg-[#3434ff] font-semibold px-10  rounded text-[#ffffff] py-4">Subscribe</a>
+                               <a className="bg-[#3434ff] cursor-pointer font-semibold px-10  rounded text-[#ffffff] py-4">Subscribe</a>
                          </div>
                     </div>
                 </div>

@@ -61,8 +61,8 @@ const {
                      </div>
                      <div className='pt-10'>
                           <form onSubmit={handleSubmit(formHandler)}>
-                                    <div className='md:mb-5 flex-col md:flex-row flex gap-8'> 
-                                            <div className='mb-5 w-full pb-3'>
+                                    <div className='mb-5 md:mb-3 flex-col md:flex-row flex gap-2 md:gap-8'> 
+                                            <div className='mb-2 w-full pb-3'>
                                                  <label className='font-jakarta font-semibold '>Full Name</label>
                                                  <input   {...register("firstName", { required: true })} type='text' className='w-full px-3 mt-2 border-[#CED4DA] rounded-md py-4' placeholder="What's your name?"/>
                                             </div>
@@ -71,7 +71,7 @@ const {
                                                  <input   {...register("email", { required: true })} className='w-full px-3 mt-2 border-[#CED4DA] rounded-md py-4' type='email' placeholder='example@youremail.com'/>
                                             </div>
                                     </div>
-                                    <div className='flex-col md:flex-row mb-5 flex gap-8'> 
+                                    <div className='flex-col md:flex-row mb-5 flex md:gap-8'> 
                                             <div className='mb-5 w-full pb-3'>
                                                  <label className='font-jakarta font-semibold '>Phone Number</label>
                                                  <input   {...register("phone", { required: true })} type='number' className='w-full px-3 mt-2 border-[#CED4DA] rounded-md py-4' placeholder='+1(484) 34234 34223'/>
