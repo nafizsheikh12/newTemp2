@@ -211,7 +211,7 @@ const Creation4 = (props: StepPropss) => {
                 Previous
               </button>
               <button
-                className="flex xsm:w-full lg:w-[9rem] justify-center bg-[#3A57E8] py-2 px-4 text-[#fff] rounded"
+                className="flex xsm:w-full lg:w-[10rem] justify-center bg-[#3A57E8] py-2 px-4 text-[#fff] rounded"
                 type="submit"
               >
                 {isLoading ? <ButtonLoader /> : "Submit Course"}
