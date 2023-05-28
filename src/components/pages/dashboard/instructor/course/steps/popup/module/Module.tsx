@@ -121,7 +121,7 @@ const Module = ({setmoduleName,setModuleId,setEditShowModal,id,name,index,assign
                </div>
 
                 <div className='mt-5 mb-6'>
-                       <button type="button" className="xsm:w-full lg:w-[9rem] justify-center bg-[#EBEEFD] border border-[#3A57E8] px-3 py-2 rounded flex items-center gap-[6px]" onClick={() => (setShowModal(true))}><Image src={plusIconBg} alt=""/>Add Content</button>
+                       <button type="button" className="xsm:w-full lg:w-[11rem] justify-center bg-[#EBEEFD] border border-[#3A57E8] px-3 py-2 rounded flex items-center gap-[6px]" onClick={() => (setShowModal(true))}><Image src={plusIconBg} alt=""/>Add Content</button>
                 </div>
                 </div>  
                }
