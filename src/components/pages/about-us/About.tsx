@@ -6,7 +6,7 @@ import aboutimg1 from "../../../assets/ui/aboutimg1.jpg"
 import aboutimg2 from "../../../assets/ui/aboutimg2.jpeg"
 import aboutimg3 from "../../../assets/ui/aboutimg3.jpeg"
 import aboutimg4 from "../../../assets/ui/aboutimg4.jpeg";
-import about from "../../../assets/ui/mainabout.jpeg";
+import about from "../../../assets/ui/pencil.jpg";
 import study from "../../../assets/ui/study.svg";
 import circle from "../../../assets/ui/1.svg";
 import sanfransico from "../../../assets/ui/sanfransico.jpg";

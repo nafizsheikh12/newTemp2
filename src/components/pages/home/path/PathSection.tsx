@@ -19,7 +19,7 @@ const PathSection = () => {
                                     <Image src={pathBg}/>
                              </div>
                              <div className='text-center'>
-                                <h3 className='text-[26px] font-jakarta font-semibold'>Full-Time</h3>
+                                <h3 className='text-[26px] font-jakarta font-semibold'>Instructor-led</h3>
                                 <p className='text-[#69697B] font-jakarta py-3'>Lorem ipsum dolor sit amet, consectere <br/> adipiscing elit. Feugiat feuigiat congue viverra facilicsis lorem ipsum</p>
                              </div>
                              <div className='mt-8'>
@@ -31,7 +31,7 @@ const PathSection = () => {
                                     <Image src={parttime}/>
                              </div>
                              <div className='text-center'>
-                                <h3 className='text-[26px] font-jakarta font-semibold'>Part-Time</h3>
+                                <h3 className='text-[26px] font-jakarta font-semibold'>Self-Paced</h3>
                                 <p className='text-[#69697B] font-jakarta py-3'>Lorem ipsum dolor sit amet, consectere <br/> adipiscing elit. Feugiat feuigiat congue viverra facilicsis lorem ipsum</p>
                              </div>
                              <div className='mt-8'>
@@ -43,7 +43,7 @@ const PathSection = () => {
                                     <Image src={online}/>
                              </div>
                              <div className='text-center'>
-                                <h3 className='text-[26px] font-jakarta font-semibold'>Online</h3>
+                                <h3 className='text-[26px] font-jakarta font-semibold'>Both</h3>
                                 <p className='text-[#69697B] font-jakarta py-3'>Lorem ipsum dolor sit amet, consectere <br/> adipiscing elit. Feugiat feuigiat congue viverra facilicsis lorem ipsum</p>
                              </div>
                              <div className='mt-8'>
