@@ -7,7 +7,7 @@ const professionalprofileoptimization = () => {
   return (
     <>
       <Head>
-        <title>ProfessionalProfileOptimization | Fourth IT Academy</title>
+        <title>ProfessionalProfileOptimization | ilearnaskill</title>
       </Head>
       <HomeLayout>
         <ProfessionalProfileOpt />

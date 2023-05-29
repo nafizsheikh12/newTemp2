@@ -10,7 +10,7 @@ export default function overview() {
     <PrivateTemplate>
       <AccessTemplate accessRole={["student"]}>
         <Head>
-          <title>Instructor | Fourth IT Academy</title>
+          <title>Instructor | ilearnaskill</title>
         </Head>
         <DashboardLayout>
           <QuizResult />

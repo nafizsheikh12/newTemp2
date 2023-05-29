@@ -11,7 +11,7 @@ export default function grades() {
       <PrivateTemplate>
         <AccessTemplate accessRole={["instructor"]}>
           <Head>
-            <title>Instructor Grades | Fourth IT Academy</title>
+            <title>Instructor Grades | ilearnaskill</title>
           </Head>
 
           <DashboardLayout>

@@ -11,7 +11,7 @@ export default function successPage() {
   return (
     <>
       <Head>
-        <title> MailSend | Fourth IT Academy</title>
+        <title> MailSend | ilearnaskill</title>
       </Head>
       <HomeLayout>
         <div className="grid lg:grid-cols-3 grid-cols-2  bg-[#E5E5E5]">

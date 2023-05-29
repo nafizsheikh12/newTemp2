@@ -8,7 +8,7 @@ export default function index() {
   return (
     <>
       <Head>
-        <title>Strategy & Governance | Fourth IT Academy</title>
+        <title>Strategy & Governance | ilearnaskill</title>
       </Head>
       <HomeLayout>
         <div

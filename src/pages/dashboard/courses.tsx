@@ -10,7 +10,7 @@ const Courses: NextPage = () => {
     <PrivateTemplate>
       <AccessTemplate accessRole={["admin", "instructor"]}>
         <Head>
-          <title>Courses | Fourth IT Academy</title>
+          <title>Courses | ilearnaskill</title>
         </Head>
         <DashboardLayout>
           <CourseComponent />

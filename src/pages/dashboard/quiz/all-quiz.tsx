@@ -10,7 +10,7 @@ export default function AllQuizes() {
     <PrivateTemplate>
       <AccessTemplate accessRole={["instructor"]}>
         <Head>
-          <title>Instructor | Fourth IT Academy</title>
+          <title>Instructor | ilearnaskill</title>
         </Head>
         <DashboardLayout>
           <AllQuiz />

@@ -99,35 +99,36 @@ const Footer = () => {
                           <h2 className="font-jakarta font-semibold pb-4 text-[#3434ff] uppercase">Pages</h2>
                            <div className="grid grid-cols-3">
                                    <ul className="text-[#69697b] font-semibold">
-                                      <li className="mb-3">Sales Home</li>
-                                      <li className="mb-3">Home</li>
-                                      <li className="mb-3">About</li>
-                                      <li className="mb-3" >Courses</li>
-                                      <li className="mb-3">Individual Course</li>
-                                      <li className="mb-3">Video Page</li>
+                                      <li className="mb-3 cursor-pointer hover:text-blue-800"><Link href={"/"}>Home</Link></li>
+                                      <li className="mb-3  cursor-pointer hover:text-blue-800"><Link href={"/about"}>About</Link></li>
+                                      <li className="mb-3 cursor-pointer hover:text-blue-800"><Link href={"/about"}>Courses</Link></li>
+                                      <li className="mb-3 cursor-pointer hover:text-blue-800" >FAQ</li>
+                                      <li className="mb-3 cursor-pointer hover:text-blue-800">Become a Partner</li>
                                   </ul>
                                   <ul className="text-[#69697b] font-semibold">
-                                      <li className="mb-3">Resource Center</li>
-                                      <li className="mb-3">Blog Post</li>
-                                      <li className="mb-3">Events</li>
-                                      <li className="mb-3">Individual Event</li>
-                                      <li className="mb-3">Teachers</li>
+                                      <li className="mb-3 cursor-pointer hover:text-blue-800">Resource Center</li>
+                                      <li className="mb-3 cursor-pointer hover:text-blue-800">Careers</li>
+                                      <li className="mb-3 cursor-pointer hover:text-blue-800">Instructors</li>
+                                      <li className="mb-3 cursor-pointer hover:text-blue-800">Individual Event</li>
+                                      <li className="mb-3 cursor-pointer hover:text-blue-800">Teachers</li>
                                   </ul>
                                   <ul className="text-[#69697b] font-semibold">
-                                          <li className="mb-3">Indivdual Teacher</li>
-                                          <li className="mb-3">Contact</li>
+                                          <li className="mb-3 cursor-pointer hover:text-blue-800">Community</li>
+                                          <li className="mb-3 cursor-pointer hover:text-blue-800">Learners</li>
+                                          <li className="mb-3 cursor-pointer hover:text-blue-800">Partners</li>
+                                          <li className="mb-3 cursor-pointer hover:text-blue-800">Blog</li>
                                   </ul>
                            </div>
                      </div>
                      <div data-aos-delay="5000" data-aos="fade-right" className="col-span-3 ml-auto hidden lg:block">
-                          <h2 className="font-jakarta font-semibold pb-4 text-[#3434ff] uppercase">Utility pages</h2>
+                          <h2 className="font-jakarta font-semibold pb-4 text-[#3434ff] uppercase">Legal</h2>
                           <ul className="text-[#69697b] font-semibold">
-                              <li  className="mb-3">Styleguide</li>
-                              <li  className="mb-3">404 Not Found </li>
-                              <li  className="mb-3">Password protected</li>
-                              <li  className="mb-3">Lienses</li>
-                              <li  className="mb-3">Start Here</li>
-                              <li  className="mb-3">Changelog</li>
+                              <li  className="mb-3 cursor-pointer hover:text-blue-800">Privacy Policy</li>
+                              <li  className="mb-3 cursor-pointer hover:text-blue-800">Cookie Policy</li>
+                              <li  className="mb-3 cursor-pointer hover:text-blue-800">Password protected</li>
+                              <li  className="mb-3 cursor-pointer hover:text-blue-800">Terms of Service</li>
+                              <li  className="mb-3 cursor-pointer hover:text-blue-800">Help</li>
+                              <li  className="mb-3 cursor-pointer hover:text-blue-800">Accessiblity</li>
                           </ul>
                      </div>
                 </div>
@@ -151,7 +152,7 @@ const Footer = () => {
                 <div data-aos-delay="5000" data-aos="fade-down" className="pt-20">
                     <div className="flex justify-between flex-col lg:flex-row">
                          <div className="text-center">
-                              <p className="text-[#69697b] font-jakarta text-[16px] mb-3 lg:mb-0 md:text-lg font-medium">Copyright © Academy | Designed by <span className="text-[#3434ff]">BRIX Templates</span> - Powered by <span className="text-[#3434ff]">Webflow</span></p>
+                              <p className="text-[#69697b] font-jakarta text-[16px] mb-3 lg:mb-0 md:text-lg font-medium">Copyright © ilearnaskill</p>
                          </div>
                          <div className="flex order-1 items-center gap-5 justify-center lg:gap-4 lg:justify-between">
                               <div>

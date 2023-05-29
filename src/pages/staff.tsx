@@ -8,7 +8,7 @@ const staff = () => {
   return (
     <>
       <Head>
-        <title>Staffing | Fourth IT Academy</title>
+        <title>Staffing | ilearnaskill</title>
       </Head>
       <HomeLayout>
         <Staffing />

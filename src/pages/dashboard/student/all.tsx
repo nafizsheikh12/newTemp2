@@ -10,7 +10,7 @@ export default function All() {
     <PrivateTemplate>
       <AccessTemplate accessRole={["instructor"]}>
         <Head>
-          <title>All Student | Fourth IT Academy</title>
+          <title>All Student | ilearnaskill</title>
         </Head>
         <DashboardLayout>
           <AllStudent />

@@ -9,7 +9,7 @@ const Contact = () => {
   return (
     <>
       <Head>
-        <title>Contact | Fourth IT Academy</title>
+        <title>Contact | ilearnaskill</title>
       </Head>
       <HomeLayout>
         <ContactUs />

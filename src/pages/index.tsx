@@ -8,7 +8,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Home | Fourth IT Academy</title>
+        <title>Home | ilearnaskill</title>
       </Head>
 
       <HomeLayout>

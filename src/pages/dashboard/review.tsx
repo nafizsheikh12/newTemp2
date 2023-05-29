@@ -10,7 +10,7 @@ const DashboardPage: NextPage = () => {
     <PrivateTemplate>
       <AccessTemplate accessRole={["admin", "instructor"]}>
         <Head>
-          <title>Home | Fourth IT Academy</title>
+          <title>Home | ilearnaskill</title>
         </Head>
 
         <DashboardLayout>

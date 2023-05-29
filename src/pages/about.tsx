@@ -16,7 +16,7 @@ const about = () => {
   return (
     <>
       <Head>
-        <title>About | Fourth IT Academy</title>
+        <title>About | ilearnaskill</title>
       </Head>
       <HomeLayout>
            <About />
