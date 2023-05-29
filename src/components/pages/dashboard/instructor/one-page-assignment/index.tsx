@@ -126,10 +126,28 @@ export default function OnePageAssignment() {
                            __html: data?.data.assignment.description,
                       }}>
               </p>
-              <a target="_blank" href={data.data.assignment.fileUrl} className="cursor-pointer flex items-center">
-                 <GoFile  className="text-[3rem] text-blue-500 mt-2"/>
-                 <span className="text-sm text-[#8A92A6]">{data.data.assignment.key}</span>
-              </a>
+              <div>
+                { 
+                   data?.data?.assignment?.key.split(".").pop() !== "mp3" &&
+                       <a
+                         rel="noreferrer"
+                         target="_blank"
+                         href= {`https://docs.google.com/gview?url=${data?.data?.assignment?.fileUrl}`}
+                         className="cursor-pointer flex items-center"
+                       >
+                         <GoFile className="text-[3rem] text-blue-500 mt-2" />
+                         <span className="text-sm text-[#8A92A6]">
+                           {data.data.assignment.key}
+                         </span>
+                       </a>
+                  }
+                  {
+                    data?.data?.assignment?.key.split(".").pop() === "mp3" &&  
+                     <div className="mt-5">
+                         <audio src={data?.data?.assignment?.fileUrl} controls/>
+                     </div>
+                  }
+              </div>
         </div>
         <div className="flex w-[60%] justify-between mt-[20px] mb-[40px] xl:flex-row lg:flex-row md:flex-row sm:flex-col xsm:flex-col">
           <p>
