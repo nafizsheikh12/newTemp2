@@ -19,7 +19,7 @@ const ForgetPassword = () => {
                     <h3 className="uppercase font-semibold text-xl m-0">FITA</h3>
                 </a>
             </Link>
-            <div className="grid grid-cols-12 h-[80vh]">
+            <div className="grid grid-cols-12 h-[80vh] relative">
                 <div className="col-span-12 lg:col-span-6 hidden md:block">
                 </div>
                 <div className="col-span-12 lg:col-span-6 flex items-center justify-center">
