@@ -9,7 +9,7 @@ const Assignmentcreation = () => {
     <PrivateTemplate>
       <AccessTemplate accessRole={["admin", "instructor"]}>
         <Head>
-          <title>Instructor | Fourth IT Academy</title>
+          <title>Instructor | ilearnaskill</title>
         </Head>
 
         <DashboardLayout>

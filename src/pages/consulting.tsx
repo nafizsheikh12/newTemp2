@@ -5,7 +5,7 @@ const consulting = () => {
   return (
     <>
       <Head>
-        <title> Consulting | Fourth IT Academy</title>
+        <title> Consulting | ilearnaskill</title>
       </Head>
       <HomeLayout>
         <Consulting />

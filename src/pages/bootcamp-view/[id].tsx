@@ -6,7 +6,7 @@ const ViewBootcamp = () => {
   return (
     <>
       <Head>
-        <title>Bootcamps | Fourth IT Academy</title>
+        <title>Bootcamps | ilearnaskill</title>
       </Head>
       <HomeLayout>
         <ViewBootcamps />

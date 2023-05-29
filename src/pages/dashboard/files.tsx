@@ -11,7 +11,7 @@ const Files = () => {
     <PrivateTemplate>
       <AccessTemplate accessRole={["instructor","student"]}>
         <Head>
-          <title>Files | Fourth IT Academy</title>
+          <title>Files | ilearnaskill</title>
         </Head>
         <DashboardLayout>
           <File />

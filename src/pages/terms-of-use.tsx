@@ -6,7 +6,7 @@ const index = () => {
   return (
     <>
       <Head>
-        <title>terms-of-use | Fourth IT Academy</title>
+        <title>terms-of-use | ilearnaskill</title>
       </Head>
       <HomeLayout>
         <div className="flex items-center justify-center py-10 font-nunito leading-relaxed text-lg">

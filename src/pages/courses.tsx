@@ -8,7 +8,7 @@ const Courses = () => {
   return (
     <>
       <Head>
-        <title>Courses | Fourth IT Academy</title>
+        <title>Courses | ilearnaskill</title>
       </Head>
       <HomeLayout>
         <CoursesPage />

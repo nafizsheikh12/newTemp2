@@ -8,7 +8,7 @@ const interview = () => {
   return (
     <>
       <Head>
-        <title>Interview | Fourth IT Academy</title>
+        <title>Interview | ilearnaskill</title>
       </Head>
       <HomeLayout>
         <InterviewPrep />

@@ -7,7 +7,7 @@ const mentoringandcoaching = () => {
   return (
     <>
       <Head>
-        <title>Mentoring-and-Coaching | Fourth IT Academy</title>
+        <title>Mentoring-and-Coaching | ilearnaskill</title>
       </Head>
       <HomeLayout>
         <MentoringCoaching />

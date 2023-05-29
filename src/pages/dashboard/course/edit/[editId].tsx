@@ -12,7 +12,7 @@ const Edit = () => {
     <PrivateTemplate>
       <AccessTemplate accessRole={["admin", "instructor"]}>
         <Head>
-          <title>Instructor File | Fourth IT Academy</title>
+          <title>Instructor File | ilearnaskill</title>
         </Head>
         <DashboardLayout>
           <CourseCreationMain />

@@ -8,7 +8,7 @@ export default function index() {
   return (
     <>
       <Head>
-        <title>Risk Management Services | Fourth IT Academy</title>
+        <title>Risk Management Services | ilearnaskill</title>
       </Head>
       <HomeLayout>
         <div

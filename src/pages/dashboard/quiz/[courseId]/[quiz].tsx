@@ -11,7 +11,7 @@ const quiz: NextPage = () => {
     <PrivateTemplate>
       <AccessTemplate accessRole={["student"]}>
         <Head>
-          <title>Students | Fourth IT Academy</title>
+          <title>Students | ilearnaskill</title>
         </Head>
 
         <DashboardLayout>

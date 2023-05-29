@@ -6,7 +6,7 @@ const blog = () => {
   return (
     <>
       <Head>
-        <title>blog | Fourth IT Academy</title>
+        <title>blog | ilearnaskill</title>
       </Head>
 
       <HomeLayout>{/* <BlogComponent /> */}</HomeLayout>

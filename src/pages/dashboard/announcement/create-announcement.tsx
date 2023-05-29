@@ -9,7 +9,7 @@ export default function index() {
     <PrivateTemplate>
       <AccessTemplate accessRole={["admin", "instructor"]}>
         <Head>
-          <title>Create Announcement | Fourth IT Academy</title>
+          <title>Create Announcement | ilearnaskill</title>
         </Head>
         <DashboardLayout>
           <CreateAnnouncement />

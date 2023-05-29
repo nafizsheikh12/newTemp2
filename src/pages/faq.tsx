@@ -7,7 +7,7 @@ const faq = () => {
   return (
     <>
       <Head>
-        <title>Faq | Fourth IT Academy</title>
+        <title>Faq | ilearnaskill</title>
       </Head>
       <HomeLayout>
         <FaqPage></FaqPage>

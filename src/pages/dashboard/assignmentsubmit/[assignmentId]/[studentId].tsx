@@ -9,7 +9,7 @@ const assignmentsubmit = () => {
   return (
     <PrivateTemplate>
       <AccessTemplate accessRole={["student"]}>
-        <Head>Assignment | Fourth IT Academy</Head>
+        <Head>Assignment | ilearnaskill</Head>
         <DashboardLayout>
           <AssignmentSubmitted />
         </DashboardLayout>

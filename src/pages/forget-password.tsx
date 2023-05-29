@@ -5,7 +5,7 @@ const ForgetPasswordPage = () => {
     return (
         <>
             <Head>
-                <title> forget-password | Fourth IT Academy</title>
+                <title> forget-password | ilearnaskills</title>
             </Head>
             <ForgetPassword />
         </>
