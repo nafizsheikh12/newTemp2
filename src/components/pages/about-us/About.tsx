@@ -78,7 +78,7 @@ const About = () => {
                     </div>
                </div>
                <div>
-                   <div className='container  mx-auto px-4 sm:px-6 pt-28 pb-24 border-b-[1px] border-[#D6DDDA]'>
+                   <div className='container  mx-auto px-4 sm:px-6 pt-28 pb-28 border-b-[1px] border-[#D6DDDA]'>
                           <div className='flex relative flex-col lg:flex-row gap-16  items-center'>
                               <div data-aos-duration="10000" data-aos="fade-down" className=' order-1 lg:order-2'>
                                    <div className=''>
@@ -258,7 +258,7 @@ const About = () => {
                                      </button>
                                 </div>
                            </div>
-                           <div data-aos-duration="10000" data-aos="fade-down" className='grid md:grid-cols-2 grid-cols-1 lg:grid-cols-3 mt-5 gap-8'>
+                           <div data-aos-duration="10000" data-aos="fade-down" className='pb-[8rem] border-b-[1px] border-[#69697b29] grid md:grid-cols-2 grid-cols-1 lg:grid-cols-3 mt-5 gap-8'>
                                 <div className='shadow-xl rounded-xl'>
                                     <div className='p-10 text-center'>
                                          <div>

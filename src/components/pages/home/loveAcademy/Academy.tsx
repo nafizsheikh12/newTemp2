@@ -28,11 +28,11 @@ const Academy = () => {
      }
   return (
     <div className='pb-12'>
-         <div className='container mx-auto px-4 sm:px-6'>
+         <div className='container mx-auto px-4 sm:px-6  border-b-[1px] border-[#69697b29] pb-16'>
               <div className='text-center'>
                    <h1 className='font-jakarta font-bold text-[36px] capitalize py-14'>Why student love <span className='text text-[#3434ff]'>academy</span></h1>
               </div>
-              <div>
+              <div >
                    <div className='pb-16'>
                         <p className='text-[#69697B] leading-[1.583em] text-[20px] text-center'>{para}</p>
 
@@ -71,7 +71,7 @@ const Academy = () => {
                             </div>
                        </div>
                    </div>
-                   <div className='flex justify-center py-6 pt-16'>
+                   <div className='flex justify-center py-6 pt-16 '>
                               <button 
                                  className="bg-[#3434ff] hover:bg-[#2e2e94] hover:text-white hover:-translate-y-2 cursor-pointer transition-all text-[#ffffff] border-2 py-4 uppercase px-8 rounded-lg font-semibold mt-5 text-[16px]"
                                >

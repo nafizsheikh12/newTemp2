@@ -18,8 +18,8 @@ const Footer = () => {
      }, [])   
   return (
     <>
-       <div className="my-9 overflow-hidden px-4 sm:px-6">
-           <div className="container mx-auto border-[#D6DDDA] border-t-2 pt-16">
+       <div className="my-9 overflow-hidden px-4 sm:px-6 pt-8">
+           <div className="container mx-auto">
                 {
                     //responsive mobile accoridan
                 }
