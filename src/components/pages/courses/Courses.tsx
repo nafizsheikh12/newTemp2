@@ -17,7 +17,7 @@ const Courses = () => {
   return (
     <div>
           <Hero />
-          <div className='px-4 sm:px-6 container mx-auto mt-16 pb-11'>
+          <div className='px-4 sm:px-6 container mx-auto mt-16 pb-11 border-b-[1px] border-[#69697b29]'>
                <div className='text-center mb-20 '>
                     <h1 data-aos-delay="5000" data-aos="fade-down" className="text-[#0b0b2c] text-[39px] lg:text-[39px] font-bold font-jakarta leading-[18px] lg:leading-[15px]">Courses</h1>
                </div>
