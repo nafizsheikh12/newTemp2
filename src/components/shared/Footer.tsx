@@ -79,17 +79,17 @@ const Footer = () => {
                          <div data-aos-delay="5000" data-aos="fade-down">
                                <h2 className="font-jakarta font-bold text-2xl">ilearnaskill</h2>
                                <div className="flex gap-5 justify-center lg:justify-start mt-4">
-                                    <div className="border-[#ececf4] p-[6px] rounded-full border-2">
-                                         <FaFacebookF className="text-[#69697b] text-[18px] "/>
+                                    <div className="border-[#ececf4] hover:bg-[#3434ff] cursor-pointer hover:!text-[#fff] transition-all p-[6px] rounded-full border-2">
+                                         <FaFacebookF className="text-[#69697b] hover:text-[#fff]  text-[18px] "/>
                                     </div>
-                                    <div className="border-[#ececf4] p-[6px] rounded-full border-2">
-                                         <GrInstagram className="text-[#69697b] text-[18px]"/>
+                                    <div className="border-[#ececf4] hover:bg-[#3434ff] cursor-pointer hover:!text-[#fff] transition-all p-[6px] rounded-full border-2">
+                                         <GrInstagram className="text-[#69697b] hover:text-[#fff] text-[18px]"/>
                                     </div>
-                                    <div className="border-[#ececf4] p-[6px] rounded-full border-2">
-                                         <GrTwitter className="text-[#69697b] text-[18px]" />
+                                    <div className="border-[#ececf4] hover:bg-[#3434ff] cursor-pointer hover:!text-[#fff] transition-all p-[6px] rounded-full border-2">
+                                         <GrTwitter className="text-[#69697b] hover:text-[#fff] text-[18px]" />
                                     </div>
-                                    <div className="border-[#ececf4] p-[6px] rounded-full border-2">
-                                         <BsLinkedin className="text-[#69697b] text-[18px]" />
+                                    <div className="border-[#ececf4] hover:bg-[#3434ff] cursor-pointer hover:!text-[#fff] transition-all p-[6px] rounded-full border-2">
+                                         <BsLinkedin className="text-[#69697b] hover:text-[#fff] text-[18px]" />
                                     </div>
                                </div>
                          </div>
