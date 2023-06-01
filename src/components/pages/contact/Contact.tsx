@@ -11,6 +11,7 @@ import Growmain from "../../../assets/ui/growmain.svg"
 import grow1 from "../../../assets/ui/grow1.svg"
 import grow3 from "../../../assets/ui/grow3.svg";
 import Aos from "aos";
+import "aos/dist/aos.css";
 import grow2 from "../../../assets/ui/growg.svg"
 
 const Contact = () => {
