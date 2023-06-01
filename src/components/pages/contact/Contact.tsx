@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import dynamic from "next/dynamic";
 import ContactForm from "./contactForm/ContactForm";
 import { BsLinkedin } from "react-icons/bs";
@@ -9,10 +9,15 @@ import {Accordion } from "flowbite-react";
 import Image from "next/image";
 import Growmain from "../../../assets/ui/growmain.svg"
 import grow1 from "../../../assets/ui/grow1.svg"
-import grow3 from "../../../assets/ui/grow3.svg"
+import grow3 from "../../../assets/ui/grow3.svg";
+import Aos from "aos";
 import grow2 from "../../../assets/ui/growg.svg"
 
 const Contact = () => {
+  
+  useEffect(() => {
+     Aos.init();
+   }, [])   
   return (
     <>
       <ContactForm />
