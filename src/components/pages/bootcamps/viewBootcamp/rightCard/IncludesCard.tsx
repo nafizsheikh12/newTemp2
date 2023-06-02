@@ -36,7 +36,7 @@ const IncludesCard = ({course}:{course:any}) => {
                 </li>
                 <li className='flex justify-between items-center mb-3'>
                     <span className='flex items-center gap-[6px] font-nunito'><IoCreateOutline className='text-[#066AC9]'/>Deadline</span>
-                    <span className='text-[#98999C]'> {moment(course.createdAt).utc().format("YYYY/MM/DD")}</span>
+                    <span className='text-[#98999C]'> {moment(course.updatedAt).utc().format("YYYY/MM/DD")}</span>
                 </li>
                 <li className='flex justify-between items-center mb-3'>
                     <span className='flex items-center gap-[6px] font-nunito'><TbCertificate className='!text-[#066AC9]'/>Certificate</span>

@@ -99,7 +99,7 @@ const Contact = () => {
                           <Accordion alwaysOpen flush={true}>
                               <Accordion.Panel>
                                       <Accordion.Title className="text-[#6132fd] font-semibold font-jakarta text-[25x]">
-                                          <h2 className="font-bold  text-lg">What are the course payment methods?</h2>
+                                          <h2 className="font-bold text-lg">What are the course payment methods?</h2>
                                       </Accordion.Title>
                                       <Accordion.Content> 
                                            <p className='font-jakarta text-[#69697b]'>If you want to reach out directly, feel free to get in touch using the contact information below.</p>
@@ -111,7 +111,7 @@ const Contact = () => {
                           <Accordion alwaysOpen flush={true}>
                               <Accordion.Panel>
                                       <Accordion.Title className="text-[#6132fd] font-semibold font-jakarta text-[25x]">
-                                          <h2 className="font-bold  text-lg">What are the course payment methods?</h2>
+                                          <h2 className="font-bold text-lg">What are the course payment methods?</h2>
                                       </Accordion.Title>
                                       <Accordion.Content> 
                                            <p className='font-jakarta text-[#69697b]'>If you want to reach out directly, feel free to get in touch using the contact information below.</p>
@@ -123,7 +123,7 @@ const Contact = () => {
                           <Accordion alwaysOpen flush={true}>
                               <Accordion.Panel>
                                       <Accordion.Title className="text-[#6132fd] font-semibold font-jakarta text-[25x]">
-                                          <h2 className="font-bold  text-lg mb-2">What are the course payment methods?</h2>
+                                          <h2 className="font-bold text-lg  mb-2">What are the course payment methods?</h2>
                                       </Accordion.Title>
                                       <Accordion.Content> 
                                            <p className='font-jakarta text-[#69697b]'>If you want to reach out directly, feel free to get in touch using the contact information below.</p>

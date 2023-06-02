@@ -232,7 +232,7 @@ const VideoCategory = ({
               )}
             </div>
             <div className="flex flex-col">
-              <label className="font-medium text-base mb-2">Seconed</label>
+              <label className="font-medium text-base mb-2">Seconds</label>
               <input
                 name="second"
                 onChange={(e) => handleChange(e)}
@@ -244,7 +244,7 @@ const VideoCategory = ({
                 required
               />
               {!inputValue.second && (
-                <p className="text-[red] text-[13px]">Second is Required</p>
+                <p className="text-[red] text-[13px]">Seconds is Required</p>
               )}
             </div>
           </div>

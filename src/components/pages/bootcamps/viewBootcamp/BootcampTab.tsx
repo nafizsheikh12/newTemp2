@@ -30,7 +30,7 @@ const BootcampTab = ({ course }: { course: any }) => {
           <Curriculum modules={course.modules} />
         </Tabs.Item>
         <Tabs.Item title="Instructor" className="p-0">
-          <Instructor course={course.instructors[0]} />
+          <Instructor course={course} />
         </Tabs.Item>
         <Tabs.Item title="Reviews" className="p-0">
           <Review rating={course.ratingsAverage}/>

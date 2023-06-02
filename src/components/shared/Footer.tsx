@@ -143,13 +143,13 @@ const Footer = () => {
                                    <p className="text-[#69697b] font-jakarta font-medium">Lorem ipsum dolor sit amet, consectetur adi.</p>
                               </div>
                          </div>
-                         <div className="flex gap-4 flex-col sm:flex-row">
-                              <input type="text" placeholder="Enter your email" className="py-3  text-[#69697b] sm:w-[21rem] rounded border-[#cfcfdb]"/>
-                               <a className="bg-[#3434ff] cursor-pointer font-semibold px-10  rounded text-[#ffffff] py-4">Subscribe</a>
+                         <div className="flex gap-4 flex-col lg:flex-row w-full lg:w-min">
+                              <input type="text" placeholder="Enter your email" className="py-3  lg:w-[21rem] text-[#69697b]  rounded border-[#cfcfdb]"/>
+                               <a className="bg-[#3434ff] cursor-pointer text-center font-semibold px-10 uppercase rounded text-[#ffffff] py-4">Subscribe</a>
                          </div>
                     </div>
                 </div>
-                <div data-aos-delay="5000" data-aos="fade-down" className="pt-20">
+                <div data-aos-delay="5000" data-aos="fade-down" className="pt-10 lg:pt-12">
                     <div className="flex justify-between flex-col lg:flex-row">
                          <div className="text-center">
                               <p className="text-[#69697b] font-jakarta text-[16px] mb-3 lg:mb-0 md:text-lg font-medium">Copyright © ilearnaskill</p>

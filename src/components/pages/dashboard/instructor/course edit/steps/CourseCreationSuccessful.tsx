@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import Link from "next/link";
+import {FiCheck} from "react-icons/fi";
 
 type props = {
   onNext: () => void;
@@ -15,14 +16,16 @@ const CourseCreationSuccessful = ({ onNext, onPrev }: props) => {
     <>
       <div>
         <div className="">
-          <div className="flex justify-center">
-            <Image src={RightIcon} width={540} height={390} alt="" />
+          <div className="flex justify-center mb-10">
+              <div className="bg-[#E6E6E6] p-[2rem] md:p-[4rem] rounded-full">
+                   <FiCheck className="text-[110px] text-white"/>
+              </div>
           </div>
           <div className="text-center  w-full m-auto mb-56">
-            <h2 className="font-semibold text-[1.4rem]">
+            <h2 className="font-semibold font-nunito text-[1.4rem]">
               Your course has been Updated Successfully.
             </h2>
-            <p className="text-[#8A92A6] font-medium text-sm mt-5 mb-12">
+            <p className="text-[#8A92A6] font-nunito font-medium text-sm mt-5 mb-12">
               Course Successfully updated and awaiting admin approval. Expect a
               confirmation email soon. Your commitment to enhancing the course
               is commendable!

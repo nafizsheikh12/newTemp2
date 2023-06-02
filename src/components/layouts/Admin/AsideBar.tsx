@@ -632,7 +632,7 @@ const AsideBar = () => {
       {!show && (
         <button
           onClick={() => setShow(!show)}
-          className="rounded-full bg-blue-800 text-white text-center inline-block w-10 h-10 font-semibold mt-3 absolute left-2 cursor-pointer"
+          className="rounded-full bg-blue-800 text-white text-center flex items-center justify-center w-10 h-10 font-semibold mt-3 absolute left-2 cursor-pointer"
         >
           <AiOutlineArrowRight className="text-lg inline-block" />
         </button>
