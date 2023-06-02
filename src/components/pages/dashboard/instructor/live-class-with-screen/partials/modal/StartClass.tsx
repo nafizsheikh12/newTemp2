@@ -79,15 +79,15 @@ const AddModuleModal = ({
               name="name"
               register={register}
               error={errors.name?.message}
-              placeholder="Meet Name"
-              label="Meet Name"
+              placeholder="Topic"
+              label="Topic"
             />
               <FormTextInput
               name="link"
               register={register}
               error={errors.link?.message}
-              placeholder="Meet Link"
-              label="Meet Link"
+              placeholder="Zoom Link"
+              label="Zoom Link"
             />
             <span className="text-red-600 text-sm font-nunito">
                 Note: https://us02web.zoom.us/j/4403561884?pwd=WnZaT3hlVzIyQUprYWkvcFFycjQ0Zz09

@@ -47,7 +47,7 @@ const Creation3 = (props:StepPropss) => {
      }  
      <form onSubmit={handleSubmit(submitThirdStep)}>
       <div className='Curriculum p-3 mt-5'>
-          <h2 className='font-semibold text-2xl mb-5'>Curriculum</h2>
+          <h2 className='font-semibold font-nunito text-2xl mb-5'>Curriculum</h2>
 
           <div className=''>
                <div className='heading_upload_lectrue flex justify-between items-center mb-6'>

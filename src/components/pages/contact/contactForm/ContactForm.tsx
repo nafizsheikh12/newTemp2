@@ -47,7 +47,7 @@ const {
   return (
     <div>
          <div className='container px-4 sm:px-6 mx-auto'>
-              <div data-aos-delay="5000" data-aos="fade-down" className='shadow-2xl p-16 rounded-xl mt-16 lg:mx-52 border-[#D6DDDA] border-t-[0.5px]'>
+              <div data-aos-delay="5000" data-aos="fade-down" className='shadow-2xl p-5 md:p-16 rounded-xl mt-16 lg:mx-52 border-[#D6DDDA] border-t-[0.5px]'>
                      <div className='flex flex-col lg:flex-row justify-center lg:justify-between gap-4 border-b-[1px] border-[#D6DDDA] pb-12'>
                             <div className='text-center lg:text-left order-1 '>
                                  <h1 className='font-jakarta text-[37px] font-bold '>Contact Us</h1>
@@ -88,7 +88,7 @@ const {
                                             </div>
                                     </div>
                                     <div className='pt-8'>
-                                    <button disabled={isLoading} className="bg-[#3434ff] px-12 py-5 rounded uppercase text-white text-[18px] font-m font-jakarta cursor-pointer z-10 hover:-translate-y-3	 hover:!bg-[#20228b] transition-all">
+                                    <button disabled={isLoading} className="bg-[#3434ff] w-full sm:w-[40%] px-8 py-5 rounded uppercase text-white text-[18px] font-m font-jakarta cursor-pointer z-10 hover:-translate-y-3	 hover:!bg-[#20228b] transition-all">
                                       {isLoading ? (
                                           <div>
                                             <Spinner />

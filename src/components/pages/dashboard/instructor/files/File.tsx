@@ -10,6 +10,7 @@ import ImageIcon from "../../../../../assets/ImageIcon.png";
 import PlayIcon from "../../../../../assets/Play.png";
 import VideoIcon from "../../../../../assets/Video.png";
 import PlusIcon from "../../../../../assets/PlusIcon.png";
+import {FcAudioFile} from "react-icons/fc"
 import {
   useAllAssignmentInstructorQuery,
   useDeleteByFileMutation,
@@ -95,6 +96,7 @@ const File = () => {
   const [open, setopen] = useState(false);
   const [playVideo, setplayVideo] = useState("");
   const [activeMenu, setactiveMenu] = useState("");
+  const [openAudio, setopenAudio] = useState(false)
   //const [dbfile, setdbfile] = useState("")
   //const [dbfileKey, setdbfileKey] = useState("")
 
@@ -437,6 +439,101 @@ const File = () => {
                                     <Image src={DocumentLogo} alt="" />
                                     <h3>{val.key}</h3>
                                   </div>
+                                </div>
+                              </div>
+                            </div>
+                          )
+                      )}
+                  </div>
+                </div>
+                <div className={`${InstructorCss.FileDocuments} mt-8`}>
+                  <h2>Audio</h2>
+                  <div className="lg:grid md:grid xsm:flex md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 xsm:flex-col  document_row gap-6">
+                    {instructorFileSuccess &&
+                      instructorFileData.data.files.map(
+                        (val: any) =>
+                          (val.key.split(".").pop() === "mp3" ||
+                            val.key.split(".").pop() === "wav") && (
+                              <div
+                              key={val._id}
+                              className="rounded-lg p-4 document_card  xsm:!w-full md:!w-full"
+                              style={{
+                                background: "#FFFFFF",
+                                boxShadow: "0px 8px 32px rgba(0, 16, 41, 0.05)",
+                                height: "385px",
+                              }}
+                            >
+                              <div className="container">
+                                <div
+                                  className={`text-center relative w-full flex items-center justify-center h-[218px] bg-no-repeat`}
+                                  style={{
+                                    background: "rgb(249, 249, 249)",
+                                    borderRadius: "5px",
+                                    padding: "35px 0px",
+                                    backgroundSize: "100% 100%",
+                                  }}
+                                >
+                                  <div className="flex flex-col justify-center items-center text-center">
+                                     <FcAudioFile className="text-center text-8xl mb-2 cursor-pointer"  onClick={() => setopenAudio(!openAudio)}/>
+                                     {
+                                       openAudio &&   <audio src={val?.file} controls/>
+                                     }
+                                  </div>
+                                  <div
+                                    className={`absolute shadow-2xl top-3 bg-white right-2 rounded px-1 ${
+                                      activeMenu === val._id
+                                        ? "block"
+                                        : "hidden"
+                                    }`}
+                                  >
+                                    <button
+                                      disabled={deleteFileLoading}
+                                      onClick={() => deleteFileHandle(val._id)}
+                                      className="py-2 px-3 flex justify-center items-center gap-1"
+                                    >
+                                      <RiDeleteBin6Line className="bg-[#bb1c1c] text-white w-[25px] h-[25px] rounded-full p-1" />
+                                      <span>
+                                        {deleteFileLoading ? (
+                                          <Spinner />
+                                        ) : (
+                                          "Delete"
+                                        )}
+                                      </span>
+                                    </button>
+                                  </div>
+                                </div>
+                                <div
+                                  className={
+                                    InstructorCss.documentCardFooterContent
+                                  }
+                                  onClick={() => setactiveMenu("")}
+                                >
+                                  <a
+                                    target="_blank"
+                                    href={`https://docs.google.com/gview?url=${val.file}`}
+                                  >
+                                    <div
+                                      className="flex justify-between"
+                                      style={{ margin: "10px 0px" }}
+                                    >
+                                      <span>
+                                        Created on{" "}
+                                        {moment(val.createdAt)
+                                          .utc()
+                                          .format("DD MMMM YYYY")}
+                                      </span>
+                                      <span className={InstructorCss.dff35mb}>
+                                        5 mb
+                                      </span>
+                                    </div>
+                                    <div
+                                      className={`flex items-center ${InstructorCss.documentCardFooterContentMiddle}`}
+                                      style={{ gap: "9px" }}
+                                    >
+                                      <FcAudioFile  className="text-5xl"/>
+                                      <h3>Audio -{val.key}</h3>
+                                    </div>
+                                  </a>
                                 </div>
                               </div>
                             </div>
@@ -1042,11 +1139,116 @@ const File = () => {
                 </div>
 
                 <div className={`${InstructorCss.FileDocuments} mt-8`}>
+                  <h2>Audio</h2>
+                  <div className="lg:grid md:grid xsm:flex md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 xsm:flex-col  document_row gap-6">
+                    {instructorFileSuccess &&
+                      instructorFileData.data.files.map(
+                        (val: any) =>
+                          (val.key.split(".").pop() === "mp3" ||
+                            val.key.split(".").pop() === "wav") && (
+                              <div
+                              key={val._id}
+                              className="rounded-lg p-4 document_card  xsm:!w-full md:!w-full"
+                              style={{
+                                background: "#FFFFFF",
+                                boxShadow: "0px 8px 32px rgba(0, 16, 41, 0.05)",
+                                height: "385px",
+                              }}
+                            >
+                              <div className="container">
+                                <div
+                                  className={`text-center relative w-full flex items-center justify-center h-[218px] bg-no-repeat`}
+                                  style={{
+                                    background: "rgb(249, 249, 249)",
+                                    borderRadius: "5px",
+                                    padding: "35px 0px",
+                                    backgroundSize: "100% 100%",
+                                  }}
+                                >
+                                  <div className="flex flex-col justify-center items-center text-center">
+                                     <FcAudioFile className="text-center text-8xl mb-2 cursor-pointer"  onClick={() => setopenAudio(!openAudio)}/>
+                                     {
+                                       openAudio &&   <audio src={val?.file} controls/>
+                                     }
+                                  </div>
+                                  <div className="test absolute right-0 top-0 block">
+                                    <Image
+                                      src={MoreIcon}
+                                      alt=""
+                                      className="cursor-pointer"
+                                      onClick={() => activemenuHandle(val._id)}
+                                    />
+                                  </div>
+                                  <div
+                                    className={`absolute shadow-2xl top-3 bg-white right-2 rounded px-1 ${
+                                      activeMenu === val._id
+                                        ? "block"
+                                        : "hidden"
+                                    }`}
+                                  >
+                                    <button
+                                      disabled={deleteFileLoading}
+                                      onClick={() => deleteFileHandle(val._id)}
+                                      className="py-2 px-3 flex justify-center items-center gap-1"
+                                    >
+                                      <RiDeleteBin6Line className="bg-[#bb1c1c] text-white w-[25px] h-[25px] rounded-full p-1" />
+                                      <span>
+                                        {deleteFileLoading ? (
+                                          <Spinner />
+                                        ) : (
+                                          "Delete"
+                                        )}
+                                      </span>
+                                    </button>
+                                  </div>
+                                </div>
+                                <div
+                                  className={
+                                    InstructorCss.documentCardFooterContent
+                                  }
+                                  onClick={() => setactiveMenu("")}
+                                >
+                                  <a
+                                    target="_blank"
+                                    href={`https://docs.google.com/gview?url=${val.file}`}
+                                  >
+                                    <div
+                                      className="flex justify-between"
+                                      style={{ margin: "10px 0px" }}
+                                    >
+                                      <span>
+                                        Created on{" "}
+                                        {moment(val.createdAt)
+                                          .utc()
+                                          .format("DD MMMM YYYY")}
+                                      </span>
+                                      <span className={InstructorCss.dff35mb}>
+                                        5 mb
+                                      </span>
+                                    </div>
+                                    <div
+                                      className={`flex items-center ${InstructorCss.documentCardFooterContentMiddle}`}
+                                      style={{ gap: "9px" }}
+                                    >
+                                      <FcAudioFile  className="text-5xl"/>
+                                      <h3>Audio -{val.key}</h3>
+                                    </div>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          )
+                      )}
+                  </div>
+                </div>
+
+                <div className={`${InstructorCss.FileDocuments} mt-8`}>
                   <h2>Videos</h2>
                   <ModalVideo
                     channel="custom"
                     isOpen={open}
                     url={playVideo}
+                    allowFullScreen
                     onClose={() => setopen(false)}
                   />
                   <div className="lg:grid md:grid xsm:flex md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 xsm:flex-col  document_row gap-6">
@@ -1055,8 +1257,8 @@ const File = () => {
                         val.modules.map((val2: any) =>
                           val2.videos.map((val3: any) => (
                             <>
-                              {(val3.key.split(".").pop() !== "mkv" ||
-                                val3.key.split(".").pop() !== "mp4") && (
+                              {
+                                val3.youtubeVideo && (
                                 <div
                                   key={val3._id}
                                   className="rounded-lg p-4 document_card xsm:!w-full md:!w-full"

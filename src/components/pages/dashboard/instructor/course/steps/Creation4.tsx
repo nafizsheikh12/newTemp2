@@ -133,7 +133,7 @@ const Creation4 = (props: StepPropss) => {
                   key={item}
                 >
                   <div className="flex justify-between items-center">
-                    <h2 className="text-base font-medium">{item.question}?</h2>
+                    <h2 className="text-base font-semibold font-nunito">{item.question}?</h2>
                     <div className="flex justify-between gap-2">
                       <div className="bg-[#D5EBDF] rounded-full w-[32px] h-[32px] flex justify-center items-center">
                         <Image src={editIcon} width={18} height={16} alt="" />
@@ -144,7 +144,7 @@ const Creation4 = (props: StepPropss) => {
                     </div>
                   </div>
                   <div className="mt-2">
-                    <p className="text-[#8A92A6]">{item.answer}</p>
+                    <p className="text-[#8A92A6] font-nunito font-medium">{item.answer}</p>
                   </div>
                 </div>
               ))}

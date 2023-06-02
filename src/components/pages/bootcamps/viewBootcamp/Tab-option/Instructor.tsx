@@ -6,23 +6,24 @@ const Instructor = ({ course }: { course: any }) => {
     <div className="font-nunito">
       <div>
         <div>
-          <div className="grid grid-cols-12 md:gap-5">
+          <div className="grid grid-cols-12 gap-3 md:gap-5">
             <div className="col-span-5">
               <div className="rounded-md">
                 <Image
-                  src={course.avatar}
+                  src={course?.instructors[0]?.avatar}
                   width={200}
                   height={140}
                   layout="responsive"
                   alt=""
+                  className="rounded-md"
                 />
               </div>
             </div>
             <div className="col-span-7">
               <div>
-                <h3 className="font-bold text-2xl">{course.firstName}</h3>
+                <h3 className="font-bold text-2xl">{course?.instructors[0]?.firstName}</h3>
                 <p className="text-sm text-[#747579]">
-                  Instructor of Marketing
+                   {course?.title}
                 </p>
               </div>
             </div>

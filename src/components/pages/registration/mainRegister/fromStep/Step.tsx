@@ -86,9 +86,9 @@ const Step = (props:any) => {
                                    />{" "}
                                    <label htmlFor="Dr">Dr</label>
                                  </div>
-                           </div>
-                           {errors.title && <InputErrorMessage message={"Select your title"} />}
+                           </div>             
                    </div>
+                   {errors.title && <InputErrorMessage message={"Select your title"} />}
                </div>
                <div className='py-4 pt-8 mb-5'> 
                      <label className='font-jakarta font-semibold'>Full Name</label>

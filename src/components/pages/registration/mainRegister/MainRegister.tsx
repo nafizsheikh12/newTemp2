@@ -54,7 +54,6 @@ const CourseCreationMain = () => {
 
   const onNext = () => {
       setStep(step + 1)
-      console.log(step)
   }
 
   const onPrev = () => {
@@ -65,7 +64,7 @@ const CourseCreationMain = () => {
   return (
     <div className='bg-white  lg:p-5 md:p-5 rounded-xl'>
          <div>
-             <h1 className='capitalize text-[#6132fd] font-jakarta font-bold text-center text-3xl pb-2'>create new account</h1>
+             <h1 className='capitalize text-[#6132fd] font-jakarta font-bold text-center text-3xl pb-2 pt-4'>create new account</h1>
          </div>
          <div className='course_creation sm:p-3 xsm:p-[2px] pt-8 md:bg-[red] ' style={{background:"#fff"}}>
             { step === 5 ? <Success />: (
