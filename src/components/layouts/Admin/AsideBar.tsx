@@ -1,16 +1,16 @@
+import { Disclosure } from "@headlessui/react";
 import {
-  MapPinIcon,
   BellIcon,
-  InboxIcon,
-  Squares2X2Icon,
-  ArrowRightIcon,
   ChevronRightIcon,
+  InboxIcon,
+  MapPinIcon,
 } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Link from "next/link";
-import { SiPagekit } from "react-icons/si";
-import React, { useState, useEffect } from "react";
+import Router, { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 import {
+  AiFillSetting,
   AiOutlineAppstore,
   AiOutlineArrowLeft,
   AiOutlineArrowRight,
@@ -20,29 +20,25 @@ import {
   AiOutlineUser,
   AiOutlineUserAdd,
   AiOutlineUsergroupAdd,
-  AiFillSetting,
 } from "react-icons/ai";
-import { VscDeviceCameraVideo } from "react-icons/vsc";
-import { MdQuiz } from "react-icons/md";
+import { BiGroup } from "react-icons/bi";
 import { BsFillChatLeftDotsFill, BsMenuButton } from "react-icons/bs";
-import { useAppSelector } from "../../../app/hooks";
+import { ImFilesEmpty } from "react-icons/im";
+import { MdNoteAdd, MdQuiz } from "react-icons/md";
+import { SiPagekit } from "react-icons/si";
+import { VscDeviceCameraVideo, VscPreview } from "react-icons/vsc";
+import { toast } from "react-toastify";
+import { useAppDispatch, useAppSelector } from "../../../app/hooks";
 import logo from "../../../assets/logo.png";
 import user from "../../../assets/user.png";
-import MobileAsideBar from "./MobileAsideBar";
 import { useLogoutMutation } from "../../../feature/api/authApi";
-import { useAppDispatch } from "../../../app/hooks";
 import { logout as logoutAction } from "../../../feature/auth/authSlice";
-import { toast } from "react-toastify";
-import Router from "next/router";
-import { useRouter } from "next/router";
-import { ImFilesEmpty } from "react-icons/im";
-import { BiGroup } from "react-icons/bi";
-import { MdNoteAdd } from "react-icons/md";
-import { VscPreview } from "react-icons/vsc";
-import { Disclosure } from "@headlessui/react";
+import MobileAsideBar from "./MobileAsideBar";
 
-import { MdOutlineKeyboardArrowUp } from "react-icons/md";
-import { MdOutlineKeyboardArrowDown } from "react-icons/md";
+import {
+  MdOutlineKeyboardArrowDown,
+  MdOutlineKeyboardArrowUp,
+} from "react-icons/md";
 const AsideBar = () => {
   const { avatar, firstName, lastName, userName, roles, studentType } =
     useAppSelector((state) => state.auth.user);
@@ -81,16 +77,11 @@ const AsideBar = () => {
       >
         <div className="mt-5 text-center">
           <Link href="/">
-            <a className="flex justify-center items-center gap-2 ">
-              <Image
-                src={logo}
-                width={60}
-                height={40}
-                className="h-5 w-6"
-                alt={"logo"}
-              />
-
-              <span className="uppercase font-semibold text-lg">FITA</span>
+            <a className="flex justify-center items-center">
+              <Image src={logo} width={60} height={39} alt={"logo"} />
+              <span className="capitalize font-semibold text-[20px]">
+                Ilearn
+              </span>
             </a>
           </Link>
         </div>
@@ -326,32 +317,34 @@ const AsideBar = () => {
                       "/dashboard/assignments/[singleAssignment]"
                       ? "!border-[#3A57E8] !text-[#3A57E8]"
                       : "",
-                    children: [
-                      {
-                        name: "All Assignment",
-                        url: "/dashboard/assignment/all-assignments",
-                        active:
-                          router.pathname == "/dashboard/assignment/all-assignments"
-                            ? "!border-[#3A57E8] !text-[#3A57E8]"
-                            : "" 
-                      },
-                      {
-                        name: "Add Assignment",
-                        url: "/dashboard/assignment-creation",
-                        active:
-                          router.pathname == "/dashboard/assignment-creation"
-                            ? "!border-[#3A57E8] !text-[#3A57E8]"
-                            : "",
-                      },
-                      {
-                        name: "Submitted Assignment",
-                        url: "/dashboard/assignment/submit-assignment",
-                        active:
-                          router.pathname == "/dashboard/assignment/submit-assignment"
-                            ? "!border-[#3A57E8] !text-[#3A57E8]"
-                            : "",
-                      },
-                    ],    
+                  children: [
+                    {
+                      name: "All Assignment",
+                      url: "/dashboard/assignment/all-assignments",
+                      active:
+                        router.pathname ==
+                        "/dashboard/assignment/all-assignments"
+                          ? "!border-[#3A57E8] !text-[#3A57E8]"
+                          : "",
+                    },
+                    {
+                      name: "Add Assignment",
+                      url: "/dashboard/assignment-creation",
+                      active:
+                        router.pathname == "/dashboard/assignment-creation"
+                          ? "!border-[#3A57E8] !text-[#3A57E8]"
+                          : "",
+                    },
+                    {
+                      name: "Submitted Assignment",
+                      url: "/dashboard/assignment/submit-assignment",
+                      active:
+                        router.pathname ==
+                        "/dashboard/assignment/submit-assignment"
+                          ? "!border-[#3A57E8] !text-[#3A57E8]"
+                          : "",
+                    },
+                  ],
                 },
 
                 {
@@ -388,7 +381,8 @@ const AsideBar = () => {
                       name: "All Grade",
                       url: "/dashboard/grades",
                       active:
-                        router.pathname == "/dashboard/grades" || router.pathname == "/dashboard/grades/[id]"
+                        router.pathname == "/dashboard/grades" ||
+                        router.pathname == "/dashboard/grades/[id]"
                           ? "!border-[#3A57E8] !text-[#3A57E8]"
                           : "",
                     },

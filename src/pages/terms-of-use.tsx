@@ -1,6 +1,6 @@
 import Head from "next/head";
-import HomeLayout from "../components/layouts/HomeLayout";
 import { AiTwotoneStar } from "react-icons/ai";
+import HomeLayout from "../components/layouts/HomeLayout";
 
 const index = () => {
   return (
@@ -12,22 +12,20 @@ const index = () => {
         <div className="flex items-center justify-center py-10 font-nunito leading-relaxed text-lg">
           <div className="max-w-[80%] xsm:flex-col sm:flex-row md:flex-row  lg:flex-row xl:flex-row flex justify-between">
             <div className="mr-[50px]xl:w-[50%] md:w-[50%] lg:w-[50%] sm:w-[50%] xsm:w-[100%]">
-              <h1 className="font-extrabold text-4xl ">
-                Terms of Service.
-              </h1>
-                <div className="flex justify-start items-center">
-                  <div className="flex justify-center items-center text-[#C91820] font-bold my-5">
-                    <div className="">
-                      <div className=" w-[30px] h-[1px] font-extrabold   border-solid border-2 border-[#C91820]"></div>
-                    </div>
-                    <div className="mx-[3px]">
-                      <AiTwotoneStar className="w-[20px] text-3xl" />
-                    </div>
-                    <div>
-                      <div className=" w-[30px] h-[1px] font-extrabold   border-solid border-2 border-[#C91820]"></div>
-                    </div>
+              <h1 className="font-extrabold text-4xl ">Terms of Service.</h1>
+              <div className="flex justify-start items-center">
+                <div className="flex justify-center items-center text-[#C91820] font-bold my-5">
+                  <div className="">
+                    <div className=" w-[30px] h-[1px] font-extrabold   border-solid border-2 border-[#C91820]"></div>
+                  </div>
+                  <div className="mx-[3px]">
+                    <AiTwotoneStar className="w-[20px] text-3xl" />
+                  </div>
+                  <div>
+                    <div className=" w-[30px] h-[1px] font-extrabold   border-solid border-2 border-[#C91820]"></div>
                   </div>
                 </div>
+              </div>
             </div>
             <div className="xl:w-[50%] md:w-[50%] lg:w-[50%] sm:w-[50%] xsm:w-[100%]">
               <div>
