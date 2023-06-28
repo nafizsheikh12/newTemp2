@@ -360,6 +360,17 @@ abbr:where([title]){
 	background-color: #3A57E8 !important;
 	
 }
+.grayscale {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+.grayscale:hover {
+  filter: none;
+  -webkit-filter: grayscale(0%);
+}
 
  /* Firefox */
  * {

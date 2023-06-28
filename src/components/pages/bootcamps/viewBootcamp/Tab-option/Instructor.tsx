@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 
 const Instructor = ({ course }: { course: any }) => {
@@ -21,10 +20,10 @@ const Instructor = ({ course }: { course: any }) => {
             </div>
             <div className="col-span-7">
               <div>
-                <h3 className="font-bold text-2xl">{course?.instructors[0]?.firstName}</h3>
-                <p className="text-sm text-[#747579]">
-                   {course?.title}
-                </p>
+                <h3 className="font-bold text-2xl">
+                  {course?.instructors[0]?.firstName}
+                </h3>
+                <p className="text-sm text-[#747579]">{course?.title}</p>
               </div>
             </div>
           </div>
