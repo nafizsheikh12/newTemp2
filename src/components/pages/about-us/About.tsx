@@ -4,13 +4,14 @@ import Image from "next/image";
 import { useEffect } from "react";
 import { AiOutlinePhone } from "react-icons/ai";
 import { Swiper, SwiperSlide } from "swiper/react";
+import sanfransico from "../../../assets/business/hands-close-up-with-pen.jpg";
+import sanfransico2 from "../../../assets/business/virtual-classroom-study-space.jpg";
 import circle from "../../../assets/ui/1.svg";
 import aboutimg1 from "../../../assets/ui/aboutimg1.jpg";
 import aboutimg2 from "../../../assets/ui/aboutimg2.jpeg";
 import aboutimg3 from "../../../assets/ui/aboutimg3.jpeg";
 import aboutimg4 from "../../../assets/ui/aboutimg4.jpeg";
 import about from "../../../assets/ui/collgue.jpg";
-import sanfransico from "../../../assets/ui/sanfransico.jpg";
 import study from "../../../assets/ui/study.svg";
 // Import Swiper styles
 import { CiLocationOn } from "react-icons/ci";
@@ -30,7 +31,7 @@ import { Navigation } from "swiper";
 const About = () => {
   useEffect(() => {
     Aos.init();
-  }, []);
+  });
 
   return (
     <div className="mt-20">
@@ -50,7 +51,7 @@ const About = () => {
               data-aos="fade-down"
               className="text-[#69697b] text-[18px] font-normal leading-[1.667em] mb-9 font-jakarta my-6"
             >
-              our mission is to make learning accessible and enjoyable for all.
+              Our mission is to make learning accessible and enjoyable for all.
               We aim to empower individuals through knowledge, fostering
               lifelong learning and personal growth.
             </p>
@@ -168,17 +169,19 @@ const About = () => {
                 className=" lg:order-1 z-20"
               >
                 <h1 className="font-jakarta text-[36px] font-semibold">
-                  About Academy
+                  About ilearnaskill
                 </h1>
                 <div>
                   <p className="text-[#69697B] text-[18px] font-jakarta mt-3 mb-5">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Feugiat feugiat congue viverra facilisis. Mauris, volutpat
-                    mi libero tellus donec amet netus.
+                    Founded with a vision to make skill learning accessible for
+                    all, iLearnASkill is more than just a platform - it's a
+                    community of lifelong learners.
                   </p>
                   <p className="text-[#69697B] text-[18px] font-jakarta mb-12">
-                    Sapien magna purus, maecenas arcu, enim pretium. Tempor sit
-                    amet nunc sit amet in ac.
+                    Our team is dedicated to curating the best learning
+                    resources and creating a supportive environment where
+                    anyone, regardless of their background or previous
+                    experience, can learn a new skill.
                   </p>
                 </div>
                 <button className="border-[#3434ff] hover:bg-[#3434ff] transition hover:-translate-y-3 hover:text-white text-[#3434ff] border-2 py-4 uppercase px-8 rounded font-medium text-[16px]">
@@ -196,8 +199,7 @@ const About = () => {
               className="text-center"
             >
               <h1 className="font-jakarta text-[35px] leading-[40px] font-semibold">
-                The Mission
-                <br /> Behind Academy
+                The Vission of iLearnASkill
               </h1>
             </div>
             <div
@@ -220,16 +222,16 @@ const About = () => {
                       </div>
                       <div>
                         <h2 className="font-jakarta text-[30px] font-semibold">
-                          1. Help you Grow
+                          1. Empowering Education Equity
                         </h2>
                       </div>
                     </div>
                     <div>
                       <p className="text-[#69697B] font-jakarta mt-2 mb-5">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Quis cursus turpis in habitant sagittis amet dolor
-                        malesuada ut. Volutpat nunc id blandit vitae ut volutpat
-                        nunc nascetur varius. Sit felis sed sem duis.
+                        Enabling education for the less privileged by breaking
+                        down barriers and providing equal opportunities for
+                        learning, empowering individuals to overcome
+                        socio-coconomic challenges through knowledge.
                       </p>
                     </div>
                   </div>
@@ -242,16 +244,17 @@ const About = () => {
                       </div>
                       <div>
                         <h2 className="font-jakarta text-[30px] font-semibold">
-                          2.Make Education Acessible
+                          2.Accessible Education for All
                         </h2>
                       </div>
                     </div>
                     <div>
                       <p className="text-[#69697B] font-jakarta mt-2 mb-5">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Quis cursus turpis in habitant sagittis amet dolor
-                        malesuada ut. Volutpat nunc id blandit vitae ut volutpat
-                        nunc nascetur varius. Sit felis sed sem duis.
+                        Making education universally accessible by removing
+                        barriers of location, affordability, and background,
+                        fostering inclusivity and empowering individuals from
+                        diverse communities to unlock their full potential
+                        through
                       </p>
                     </div>
                   </div>
@@ -268,16 +271,17 @@ const About = () => {
                 data-aos="fade-down"
                 className="font-jakarta text-[35px] pb-1 leading-[40px] font-semibold"
               >
-                Come and Visit Us
+                Explore Our Platform
               </h1>
               <p
                 data-aos-duration="10000"
                 data-aos="fade-down"
                 className="text-[#69697B] font-jakarta mt-2 mb-5"
               >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat
-                feugiat congue viverra facilisis. Mauris, volutpat mi libero
-                tellus donec amet netus.
+                Dive into iLearnASkill online! Explore our digital platform,
+                engage with our dedicated instructors, join our vibrant online
+                community, and experience the transformative power of learning,
+                all at your fingertips.
               </p>
             </div>
             <div
@@ -291,7 +295,7 @@ const About = () => {
                 </div>
                 <div className="p-5">
                   <h2 className="font-jakarta text-[26px] pb-1 leading-[40px] font-semibold">
-                    Academy San Fransico
+                    ilearnaskill USA
                   </h2>
                   <div className="flex flex-col sm:flex-row sm:justify-between gap-4 sm:items-center">
                     <div className="flex  gap-2 items-center">
@@ -319,11 +323,11 @@ const About = () => {
               </div>
               <div className="shadow-xl rounded-xl">
                 <div>
-                  <Image src={sanfransico} className="rounded-t-xl" />
+                  <Image src={sanfransico2} className="rounded-t-xl" />
                 </div>
                 <div className="p-5">
                   <h2 className="font-jakarta text-[26px] pb-1 leading-[40px] font-semibold">
-                    Academy San Fransico
+                    ilearnaskill Africa
                   </h2>
                   <div className="flex flex-col sm:flex-row sm:justify-between gap-4 sm:items-center">
                     <div className="flex gap-2 items-center">
@@ -332,7 +336,7 @@ const About = () => {
                       </div>
                       <div>
                         <p className="text-[#69697B] font-jakarta mt-2 mb-5">
-                          216 Eddy St, San Francisco, California (CA), 94102
+                          216 Eddy St, Africa, zimbo (CA), 94102
                         </p>
                       </div>
                     </div>
@@ -447,7 +451,7 @@ const About = () => {
                   data-aos="fade-down"
                   className="border-[#3434ff] hover:bg-[#3434ff] transition hover:-translate-y-3 hover:text-white text-[#3434ff] border-2 py-4 uppercase px-8 rounded font-medium text-[16px]"
                 >
-                  All Teachers
+                  All Instructors
                 </button>
               </div>
             </div>

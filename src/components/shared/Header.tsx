@@ -1,19 +1,19 @@
-import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
-
 import Image from "next/image";
-import logo from "../../assets/logo.png";
 import Link from "next/link";
+import { Fragment, useLayoutEffect, useRef } from "react";
+import logo from "../../assets/logo.png";
 
+import { gsap } from "gsap";
 import {
   AiOutlineBars,
   AiOutlineClose,
   AiOutlinePoweroff,
 } from "react-icons/ai";
-import { IoIosArrowDown, IoMdCart } from "react-icons/io";
+import { IoIosArrowDown } from "react-icons/io";
 import { useAppSelector } from "../../app/hooks";
-import UserMenu from "./UserMenu";
 import { isAuthorized } from "../../utils/auth";
+import UserMenu from "./UserMenu";
 
 const menu: {
   name: string;
@@ -40,7 +40,6 @@ const menu: {
     name: "Contact Us",
     url: "/contact",
   },
-
 ];
 
 function classNames(...classes: any[]): string {
@@ -51,23 +50,54 @@ export default function Header() {
   const {
     user: { email, avatar, firstName },
     refresh,
-  } = useAppSelector((state:any) => state.auth);
+  } = useAppSelector((state: any) => state.auth);
 
+  const app = useRef<any>();
+  const circle = useRef<any>();
+
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+      // use scoped selectors
+      gsap.to(".navs", {
+        scale: 1,
+        ease: "power4.out",
+        delay: 0.1,
+        skewY: 0,
+        stagger: 0.01,
+        duration: 1,
+        opacity: 1,
+      });
+      // or refs
+      gsap.to(circle.current, {
+        y: 0,
+        ease: "power4.out",
+        delay: 0.1,
+        skewY: 0,
+        scale: 0.9,
+        stagger: 0.01,
+        duration: 3,
+        opacity: 1,
+      });
+    }, app);
+    return () => ctx.revert();
+  });
   return (
-    <Popover className="relative bg-white font-nunito">
+    <Popover className="relative bg-white font-nunito" ref={app}>
       <div className="mx-auto lg:max-w-7xl px-4 sm:px-6">
         <div className="flex items-center justify-between border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
           <div className="flex justify-start basis-1/2 lg:w-0 sm:basis-1/12">
             <Link href="/">
-              <div className="flex cursor-pointer gap-2 items-center min-w-max">
+              <div className="flex cursor-pointer gap-2 items-center min-w-max navs scale-[0.9] transition-all ease-in-out  opacity-0 hover:!scale-[1.1]">
                 <Image
                   width={60}
-                  height={40}
+                  height={52}
                   className="h-6 w-6"
                   src={logo}
                   alt=""
                 />
-                <span className="min-w-max font-bold text-[18px]">ilearnaskill</span>
+                <span className="min-w-max font-bold text-[20px]">
+                  ilearnaskill
+                </span>
               </div>
             </Link>
           </div>
@@ -77,7 +107,7 @@ export default function Header() {
               <AiOutlineBars className="h-6 w-6" aria-hidden="true" />
             </Popover.Button>
           </div>
-          <div className="lg:flex lg:flex-1 lg:justify-center">
+          <div className="lg:flex lg:flex-1 lg:justify-center navs scale-[0.9] opacity-0">
             <Popover.Group
               as="nav"
               className="hidden space-x-10 md:hidden lg:flex"
@@ -88,7 +118,7 @@ export default function Header() {
                     <DropDown subMenus={menuItem} />
                   ) : (
                     <Link href={menuItem?.url ? menuItem?.url : "#"}>
-                      <span className=" text-[#0b0b2c] hover:text-[#3434ff] transition-all cursor-pointer">
+                      <span className=" text-[#0b0b2c] hover:text-[#3434ff] transition-all cursor-pointer text-lg font-jakarta">
                         {menuItem.name}
                       </span>
                     </Link>
@@ -101,7 +131,7 @@ export default function Header() {
           <div className="hidden lg:flex items-center gap-2">
             {!isAuthorized(email, refresh) ? (
               <Link href="/signin">
-                <a className="px-4 py-1 bg-[#3434ff] text-white flex items-center gap-2 rounded">
+                <a className="navs scale-[0.9] opacity-0 px-6 py-2 tracking-wide font-medium font-jakarta uppercase bg-[#3434ff] text-white flex items-center gap-2 rounded">
                   Sign in
                 </a>
               </Link>

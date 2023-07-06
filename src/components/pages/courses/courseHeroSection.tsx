@@ -1,4 +1,6 @@
+import { gsap } from "gsap";
 import Image from "next/image";
+import { useLayoutEffect, useRef } from "react";
 import cir1 from "../../../assets/ui/1.svg";
 import cir2 from "../../../assets/ui/2.svg";
 import circle1 from "../../../assets/ui/circle1.svg";
@@ -6,20 +8,50 @@ import circle2 from "../../../assets/ui/circle2.svg";
 import courseBg from "../../../assets/ui/study.jpg";
 
 const CourseHeroSection = () => {
+  const app = useRef<any>();
+  const circle = useRef<any>();
+
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+      // use scoped selectors
+      gsap.to(".courses", {
+        y: 0,
+        ease: "power4.out",
+        delay: 0.1,
+        skewY: 0,
+        stagger: 0.01,
+        duration: 2,
+        opacity: 1,
+      });
+      // or refs
+      gsap.to(circle.current, {
+        y: 0,
+        ease: "power4.out",
+        delay: 0.1,
+        skewY: 0,
+        scale: 1,
+        stagger: 0.01,
+        duration: 2,
+        opacity: 1,
+      });
+    }, app);
+
+    return () => ctx.revert();
+  });
+
   return (
     <>
-      <div className="pt-[82px] px-4 sm:px-6 lg:pb-[112px] overflow-hidden">
+      <div
+        className="pt-[82px] px-4 sm:px-6 lg:pb-[112px] overflow-hidden"
+        ref={app}
+      >
         <div className="container px-4  mx-auto relative">
           <div className="grid grid-cols-12 lg:grid-cols-12 gap-4 lg:gap-[100px] items-center relative pb-10 ">
-            <div
-              data-aos-delay="5000"
-              data-aos="fade-down"
-              className="col-span-12 z-20 mb-14 lg:mb-0 lg:col-span-5 text-center lg:text-left"
-            >
+            <div className="opacity-0 courses translate-y-[-200px] col-span-12 z-20 mb-14 lg:mb-0 lg:col-span-5 text-center lg:text-left">
               <h1
                 data-aos-delay="5000"
                 data-aos="fade-down"
-                className="text-[#0b0b2c] text-[52px] lg:text-[70px]  font-bold font-jakarta leading-[35px]"
+                className="text-[#0b0b2c] text-[52px] lg:text-[70px]  font-black font-jakarta leading-[35px]"
               >
                 Courses
               </h1>
@@ -40,11 +72,7 @@ const CourseHeroSection = () => {
             </div>
 
             <div className="col-span-12 lg:col-span-7 text-center">
-              <div
-                data-aos-delay="5000"
-                data-aos="fade-down"
-                className="h-full"
-              >
+              <div ref={circle} className="h-full opacity-0   scale-[0.7]">
                 <Image src={courseBg} alt="d" className="rounded-3xl " />
               </div>
               <div className="absolute left-[-121px] top-[-80px]">
@@ -62,7 +90,7 @@ const CourseHeroSection = () => {
               <div
                 data-aos-delay="5000"
                 data-aos="fade-down"
-                className="absolute top-[24rem] left-[38rem]"
+                className="absolute top-[12rem] left-[38rem]"
               >
                 <Image src={circle2} className="absolute c2 -z-10" />
               </div>

@@ -1,36 +1,146 @@
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
+import { useEffect, useRef } from "react";
 import pathBg from "../../../../assets/ui/path1.png";
 import parttime from "../../../../assets/ui/path2.png";
 import online from "../../../../assets/ui/path3.png";
+gsap.registerPlugin(ScrollTrigger);
 
 const PathSection = () => {
+  const app = useRef<any>();
+  const textanim = useRef<any>();
+  const textanim2 = useRef<any>();
+  const iconanim = useRef<any>();
+  const iconanim1 = useRef<any>();
+  const iconanim2 = useRef<any>();
+
+  useEffect(() => {
+    const pin = gsap.fromTo(
+      textanim.current,
+      {
+        opacity: 0,
+        y: "110px",
+      },
+      {
+        y: 0,
+        duration: 1,
+        opacity: 1,
+        ease: "none",
+        scrollTrigger: {
+          trigger: app.current,
+          start: "top center bottom",
+          end: " top",
+        },
+      }
+    );
+
+    const pin2 = gsap.fromTo(
+      textanim2.current,
+      {
+        opacity: 0,
+        y: 110,
+      },
+      {
+        y: 0,
+        duration: 1,
+        opacity: 1,
+        ease: "none",
+        scrollTrigger: {
+          trigger: app.current,
+          start: "top center bottom",
+          end: " top",
+        },
+      }
+    );
+
+    const icon = gsap.fromTo(
+      iconanim.current,
+      {
+        opacity: 0,
+      },
+      {
+        scale: 1,
+        duration: 2,
+        opacity: 1,
+        ease: "none",
+        scrollTrigger: {
+          trigger: app.current,
+          start: " center bottom",
+          end: " top",
+        },
+      }
+    );
+
+    const icon1 = gsap.fromTo(
+      iconanim1.current,
+      {
+        opacity: 0,
+      },
+      {
+        scale: 1,
+        duration: 2,
+        opacity: 1,
+        ease: "none",
+        scrollTrigger: {
+          trigger: app.current,
+          start: " center bottom",
+          end: " top",
+        },
+      }
+    );
+
+    const icon2 = gsap.fromTo(
+      iconanim2.current,
+      {
+        opacity: 0,
+      },
+      {
+        scale: 1,
+        duration: 2,
+        opacity: 1,
+        ease: "none",
+        scrollTrigger: {
+          trigger: app.current,
+          start: " center bottom",
+          end: " top",
+        },
+      }
+    );
+
+    return () => {
+      pin.kill();
+      pin2.kill();
+      icon.kill();
+      icon1.kill();
+      icon2.kill();
+    };
+  }, []);
   return (
-    <div>
+    <div ref={app}>
       <div className="px-4 sm:px-6 ">
         <div className="container mx-auto text-center">
           <h2
-            data-aos-delay="5000"
-            data-aos="fade-down"
+            ref={textanim}
             className="text-[35px] mb-3 lg:text-[40px] font-jakarta font-semibold"
           >
             Choose Your Path
           </h2>
           <p
-            data-aos-delay="5000"
-            data-aos="fade-down"
+            ref={textanim2}
             className="text-[#69697B] text-[18px] font-jakarta"
           >
-            Opt for instructor-led guidance, self-paced learning, or a blend of
-            both to suit your learning style.
+            Choose your path at iLearnASkill: opt for instructor-led guidance,
+            self-paced learning, or a blend of both to suit your learning style.
           </p>
         </div>
         <div className="container mx-auto py-14">
-          <div
-            data-aos-delay="5000"
-            data-aos="fade-down"
-            className="grid grid-cols-1 lg:grid-cols-3 gap-9"
-          >
-            <div className="text-center">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-9">
+            <div
+              className="text-center opacity-0 scale-[0.7]
+            "
+              ref={iconanim}
+            >
               <div>
                 <Image src={pathBg} width={270} height={270} />
               </div>
@@ -50,7 +160,7 @@ const PathSection = () => {
                 </a>
               </div>
             </div>
-            <div className="text-center">
+            <div className="text-center opacity-0 scale-[0.7]" ref={iconanim1}>
               <div>
                 <Image src={parttime} width={270} height={270} />
               </div>
@@ -69,7 +179,7 @@ const PathSection = () => {
                 </a>
               </div>
             </div>
-            <div className="text-center">
+            <div className="text-center opacity-0 scale-[0.7]" ref={iconanim2}>
               <div>
                 <Image src={online} width={270} height={270} />
               </div>

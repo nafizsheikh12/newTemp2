@@ -15,7 +15,7 @@ import ContactForm from "./contactForm/ContactForm";
 const Contact = () => {
   useEffect(() => {
     Aos.init();
-  }, []);
+  });
   return (
     <>
       <ContactForm />
@@ -44,21 +44,21 @@ const Contact = () => {
             className="grid grid-cols-1 lg:grid-cols-3  gap-8 pt-20 border-b-[1px] border-[#D6DDDA] pb-24"
           >
             <div className="cursor-pointer hover:scale-95 transition-all shadow-xl p-7 py-5 rounded-lg">
-              <h3 className="font-jakarta text-[27px] font-bold mb-5">Phone</h3>
+              <h3 className="font-jakarta text-[27px] font-bold mb-5">Email</h3>
               <div>
                 <h4 className="font-jakarta uppercase text-[17px] font-semibold text-[#3434ff] ">
-                  Sanfransicisco
+                  Admin
                 </h4>
                 <h4 className="font-jakarta text-[23px] font-semibold ">
-                  (415)701 - 3234
+                  admin@ilearnaskill.com
                 </h4>
               </div>
               <div className="mt-8">
                 <h4 className="font-jakarta uppercase text-[17px] font-semibold text-[#3434ff]">
-                  New york
+                  Support
                 </h4>
                 <h4 className="font-jakarta text-[23px] font-semibold ">
-                  (415)701 - 3234
+                  support@ilearnaskill.com
                 </h4>
               </div>
             </div>
@@ -66,18 +66,18 @@ const Contact = () => {
               <h3 className="font-jakarta text-[27px] font-bold mb-5">Phone</h3>
               <div>
                 <h4 className="font-jakarta uppercase text-[17px] font-semibold text-[#3434ff] ">
-                  Sanfransicisco
+                  Seattle
                 </h4>
                 <h4 className="font-jakarta text-[23px] font-semibold ">
-                  (415)701 - 3234
+                  (+1)360-386-2837
                 </h4>
               </div>
               <div className="mt-8">
                 <h4 className="font-jakarta uppercase text-[17px] font-semibold text-[#3434ff]">
-                  New york
+                  Ghana
                 </h4>
                 <h4 className="font-jakarta text-[23px] font-semibold ">
-                  (415)701 - 3234
+                  (233)20-155-9951
                 </h4>
               </div>
             </div>
@@ -92,7 +92,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-jakarta text-[20px] font-semibold">
-                      Academy
+                      ilearnaskill
                     </h4>
                   </div>
                 </div>
@@ -102,7 +102,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-jakarta text-[20px] font-semibold">
-                      Academy
+                      ilearnaskill
                     </h4>
                   </div>
                 </div>
@@ -112,7 +112,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-jakarta text-[20px] font-semibold">
-                      Academy
+                      ilearnaskill
                     </h4>
                   </div>
                 </div>
@@ -122,7 +122,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-jakarta text-[20px] font-semibold">
-                      Academy
+                      ilearnaskill
                     </h4>
                   </div>
                 </div>
