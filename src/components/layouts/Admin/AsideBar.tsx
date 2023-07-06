@@ -78,7 +78,7 @@ const AsideBar = () => {
         <div className="mt-5 text-center">
           <Link href="/">
             <a className="flex justify-center items-center">
-              <Image src={logo} width={60} height={39} alt={"logo"} />
+              <Image src={logo} width={45} height={39} alt={"logo"} />
               <span className="capitalize font-semibold text-[20px]">
                 Ilearn
               </span>

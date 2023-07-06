@@ -1,10 +1,16 @@
+import Aos from "aos";
+import "aos/dist/aos.css";
 import Image from "next/image";
+import { useLayoutEffect } from "react";
 import grow1 from "../../../../assets/ui/grow1.svg";
 import grow3 from "../../../../assets/ui/grow3.svg";
 import grow2 from "../../../../assets/ui/growg.svg";
 import Growmain from "../../../../assets/ui/growmain.svg";
 
 const Grow = () => {
+  useLayoutEffect(() => {
+    Aos.init();
+  });
   return (
     <div>
       <div className="my-12 px-4 sm:px-6 md:my-20  pb-10 bg-[#3434ff] ">

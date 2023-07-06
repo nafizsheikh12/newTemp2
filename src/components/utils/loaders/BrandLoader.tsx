@@ -1,17 +1,17 @@
 import Image from "next/image";
 
 const BrandLoader = () => {
-    return (
-        <div className="fixed flex items-center justify-center h-screen w-screen z-[9999] bg-[#ffffff]">
-            <Image
-                src="/logo.png"
-                alt="logo"
-                width="70"
-                height="50"
-                className="animate-pulse"
-            />
-        </div>
-    );
+  return (
+    <div className="fixed flex items-center justify-center h-screen w-screen z-[9999] bg-[#ffffff]">
+      <Image
+        src="/logo.png"
+        alt="logo"
+        width="55"
+        height="52"
+        className="animate-pulse"
+      />
+    </div>
+  );
 };
 
 export default BrandLoader;

@@ -16,7 +16,7 @@ const Courses = () => {
   return (
     <div className="pt-5">
       <Hero />
-      <div className="px-4 sm:px-6 container mx-auto mt-16 pb-11 border-b-[1px] border-[#69697b29]">
+      <div className="px-4 border-t-[1px] pt-20 sm:px-6 container mx-auto mt-16 pb-11 border-b-[1px] border-[#69697b29]">
         <div className="text-center mb-20 ">
           <h1
             data-aos-delay="5000"

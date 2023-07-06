@@ -1,3 +1,6 @@
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { useLayoutEffect, useRef } from "react";
 import { useGetAllActiveCourseQuery } from "../../../../feature/api/dashboardApi";
 import BootCampsCard from "../../bootcamps/bootCampsCard/BootCampsCard";
 
@@ -6,28 +9,78 @@ const Bootcamps = () => {
     {}
   );
 
+  gsap.registerPlugin(ScrollTrigger);
+  const app = useRef<any>();
+  const textanim = useRef<any>();
+  const textanim2 = useRef<any>();
+
+  useLayoutEffect(() => {
+    const pin = gsap.fromTo(
+      textanim.current,
+      {
+        y: "200px",
+        opacity: 0,
+      },
+      {
+        y: 0,
+        duration: 1,
+        opacity: 1,
+        skewY: 0,
+        stagger: 0.01,
+        ease: "power4.out",
+        scrollTrigger: {
+          trigger: app.current,
+          start: "top center bottom",
+          end: " top",
+        },
+      }
+    );
+
+    const pin2 = gsap.fromTo(
+      textanim2.current,
+      {
+        translateY: "200px",
+        opacity: 0,
+      },
+      {
+        ease: "none",
+        duration: 1,
+        translateY: 0,
+        opacity: 1,
+        scrollTrigger: {
+          trigger: app.current,
+          start: "top center bottom",
+          end: " top",
+        },
+      }
+    );
+
+    return () => {
+      pin.kill();
+      pin2.kill();
+    };
+  }, []);
   return (
-    <div className="font-jakarta px-4 sm:px-6 my-12 md:my-20">
+    <div className="font-jakarta px-4 sm:px-6 my-12 md:my-20" ref={app}>
       <div className="container mx-auto">
-        <div className="grid grid-cols-12 text-center lg:text-left items-baseline mb-8">
-          <div className="col-span-12 lg:col-span-5">
-            <h2
-              data-aos-delay="5000"
-              data-aos="fade-down"
-              className="text-[40px] leading-[1.2em] tracking-[0.01em] text-[#0b0b2c] font-bold mb-2"
-            >
+        <div className="grid grid-cols-12 text-center lg:text-left items-baseline mb-12">
+          <div
+            className="col-span-12 lg:col-span-8 translate-y-[200px] opacity-0"
+            ref={textanim}
+          >
+            <h2 className="text-[40px] leading-[1.2em] tracking-[0.01em] text-[#0b0b2c] font-bold mb-2">
               Our Courses
             </h2>
-            <p
-              data-aos-delay="5000"
-              data-aos="fade-down"
-              className="text-[#69697b] text-[18px] leading-[1.667em]"
-            >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat
-              feugiat congue viverra facilisis.
+            <p className="text-[#69697b] text-[18px] leading-[1.667em]">
+              Discover our diverse range of courses, meticulously designed to
+              empower your learning journey. From coding to cooking, unlock new
+              potentials and reinvent yourself with iLearnASkill.
             </p>
           </div>
-          <div className="col-span-12 lg:col-span-7 flex justify-center mt-5 lg:mt-0 lg:justify-end">
+          <div
+            className="translate-y-[200px] opacity-0 col-span-12 lg:col-span-4 flex justify-center mt-5 lg:mt-0 lg:justify-end"
+            ref={textanim2}
+          >
             <a
               data-aos-delay="5000"
               data-aos="fade-down"
