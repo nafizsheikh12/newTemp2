@@ -87,16 +87,16 @@ export default function Header() {
         <div className="flex items-center justify-between border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
           <div className="flex justify-start basis-1/2 lg:w-0 sm:basis-1/12">
             <Link href="/">
-              <div className="flex cursor-pointer gap-2 items-center min-w-max navs scale-[0.9] transition-all ease-in-out  opacity-0 hover:!scale-[1.1]">
+              <div className="flex cursor-pointer gap-1 items-center min-w-max navs scale-[0.9] transition-all ease-in-out  opacity-0 hover:!scale-[1.1]">
                 <Image
-                  width={60}
+                  width={58}
                   height={52}
                   className="h-6 w-6"
                   src={logo}
                   alt=""
                 />
-                <span className="min-w-max font-bold text-[20px]">
-                  ilearnaskill
+                <span className="min-w-max font-bold text-[22px] text-[#3434ff]">
+                  learnaskill
                 </span>
               </div>
             </Link>

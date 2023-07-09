@@ -11,7 +11,7 @@ import aboutimg1 from "../../../assets/ui/aboutimg1.jpg";
 import aboutimg2 from "../../../assets/ui/aboutimg2.jpeg";
 import aboutimg3 from "../../../assets/ui/aboutimg3.jpeg";
 import aboutimg4 from "../../../assets/ui/aboutimg4.jpeg";
-import about from "../../../assets/ui/collgue.jpg";
+import about from "../../../assets/ui/focused-people-working-library.jpg";
 import study from "../../../assets/ui/study.svg";
 // Import Swiper styles
 import { CiLocationOn } from "react-icons/ci";
