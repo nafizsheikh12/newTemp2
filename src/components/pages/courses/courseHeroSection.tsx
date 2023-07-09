@@ -5,7 +5,7 @@ import cir1 from "../../../assets/ui/1.svg";
 import cir2 from "../../../assets/ui/2.svg";
 import circle1 from "../../../assets/ui/circle1.svg";
 import circle2 from "../../../assets/ui/circle2.svg";
-import courseBg from "../../../assets/ui/study.jpg";
+import courseBg from "../../../assets/ui/collgue.jpg";
 
 const CourseHeroSection = () => {
   const app = useRef<any>();

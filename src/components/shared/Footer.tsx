@@ -80,16 +80,33 @@ const Footer = () => {
                 </h2>
                 <div className="flex gap-5 justify-center lg:justify-start mt-4">
                   <div className="border-[#ececf4] hover:bg-[#3434ff] cursor-pointer hover:!text-[#fff] transition-all p-[6px] rounded-full border-2">
-                    <FaFacebookF className="text-[#69697b] hover:text-[#fff]  text-[18px] " />
+                    <a
+                      href="https://www.facebook.com/profile.php?id=100094306640217"
+                      target="_blank"
+                    >
+                      <FaFacebookF className="text-[#69697b] hover:text-[#fff]  text-[18px] " />
+                    </a>
                   </div>
                   <div className="border-[#ececf4] hover:bg-[#3434ff] cursor-pointer hover:!text-[#fff] transition-all p-[6px] rounded-full border-2">
-                    <GrInstagram className="text-[#69697b] hover:text-[#fff] text-[18px]" />
+                    <a
+                      href="https://www.instagram.com/ilearnaskill"
+                      target="_blank"
+                    >
+                      <GrInstagram className="text-[#69697b] hover:text-[#fff] text-[18px]" />
+                    </a>
                   </div>
                   <div className="border-[#ececf4] hover:bg-[#3434ff] cursor-pointer hover:!text-[#fff] transition-all p-[6px] rounded-full border-2">
-                    <GrTwitter className="text-[#69697b] hover:text-[#fff] text-[18px]" />
+                    <a href="https://twitter.com/ilearnaskill" target="_blank">
+                      <GrTwitter className="text-[#69697b] hover:text-[#fff] text-[18px]" />
+                    </a>
                   </div>
                   <div className="border-[#ececf4] hover:bg-[#3434ff] cursor-pointer hover:!text-[#fff] transition-all p-[6px] rounded-full border-2">
-                    <BsLinkedin className="text-[#69697b] hover:text-[#fff] text-[18px]" />
+                    <a
+                      href="https://www.linkedin.com/in/ilearn-askill-068b58282/"
+                      target="_blank"
+                    >
+                      <BsLinkedin className="text-[#69697b] hover:text-[#fff] text-[18px]" />
+                    </a>
                   </div>
                 </div>
               </div>

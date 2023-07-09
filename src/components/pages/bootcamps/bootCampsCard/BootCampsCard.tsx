@@ -64,7 +64,7 @@ const BootCampsCard = ({
           </Link>
           <div className="px-4 py-5">
             <div>
-              <div className="bg-[rgba(97,50,253,0.24)] w-[23%] px-3 flex justify-center mb-4 items-center text-center rounded">
+              <div className="bg-[rgba(97,50,253,0.24)] w-fit px-2 flex justify-center mb-4 items-center text-center rounded">
                 <h3 className="font-jakarta font-medium text-[#6132fd]">
                   {level}
                 </h3>
