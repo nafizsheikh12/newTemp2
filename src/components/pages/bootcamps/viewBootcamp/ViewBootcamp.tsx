@@ -1,15 +1,15 @@
-import React, { useState } from "react";
-import ViewBootCampTitle from "./ViewBootCampTitle";
-import BootcampTab from "./BootcampTab";
-import BootcampPriceCard from "./rightCard/BootcampPriceCard";
+import { Spinner } from "flowbite-react";
 import { useRouter } from "next/router";
-import { useGetOneCourseQuery } from "../../../../feature/api/dashboardApi";
-import IncludesCard from "./rightCard/IncludesCard";
+import { useState } from "react";
 import ModalVideo from "react-modal-video";
 import "react-modal-video/css/modal-video.css";
-import Tags from "./rightCard/Tags";
+import { useGetOneCourseQuery } from "../../../../feature/api/dashboardApi";
 import TopFormRegistration from "../../signin/SigninForm1";
-import {Spinner} from "flowbite-react"
+import BootcampTab from "./BootcampTab";
+import ViewBootCampTitle from "./ViewBootCampTitle";
+import BootcampPriceCard from "./rightCard/BootcampPriceCard";
+import IncludesCard from "./rightCard/IncludesCard";
+import Tags from "./rightCard/Tags";
 
 const ViewBootcamp = () => {
   const router = useRouter();
@@ -18,12 +18,12 @@ const ViewBootcamp = () => {
   const [open, setOpen] = useState(false);
   const [regShow, setregShow] = useState(false);
   const [videoLink, setvideoLink] = useState("");
- // console.log(data);
+  // console.log(data);
   return (
     <div className="font-nunito">
       {isLoading ? (
         <div className="h-[100vh] flex justify-center items-center">
-            <Spinner />
+          <Spinner />
         </div>
       ) : isError ? (
         <div>Error...</div>
@@ -37,7 +37,7 @@ const ViewBootcamp = () => {
                 url={data.data.course.videoUrl}
                 onClose={() => setOpen(false)}
               />
-              <div className="container mx-auto px-4 sm:px-6">
+              <div className="container  mx-auto px-4 sm:px-6">
                 <div className="py-8">
                   <div className="grid grid-cols-12">
                     <div className="col-span-12 lg:col-span-8">
@@ -49,7 +49,7 @@ const ViewBootcamp = () => {
               </div>
             </section>
             <section>
-              <div className="container mx-auto px-4 sm:px-6">
+              <div className="container border-b-[1px] border-[#D6DDDA] pb-5 mx-auto px-4 sm:px-6">
                 <div className="grid grid-cols-12 gap-3 lg:gap-6 my-7">
                   <div
                     className="col-span-12 lg:col-span-8"
