@@ -64,37 +64,41 @@ const BootCampsCard = ({
           </Link>
           <div className="px-4 py-5">
             <div>
-              <div className="bg-[rgba(97,50,253,0.24)] w-fit px-2 flex justify-center mb-4 items-center text-center rounded">
-                <h3 className="font-jakarta font-medium text-[#6132fd]">
-                  {level}
-                </h3>
-              </div>
-              <div className="mb-3">
-                <h2 className="font-jakarta font-bold text-2xl"> {name}</h2>
-              </div>
-              <div className="flex justify-between items-center">
-                <div className="flex gap-2 items-center ">
-                  <div>
-                    <MdOutlineWatchLater className="text-[#EC455A] text-[23px] font-semibold" />
+              <Link href={"/bootcamp-view/[id]"} as={`bootcamp-view/${id}`}>
+                <div>
+                  <div className="bg-[rgba(97,50,253,0.24)] w-fit px-2 flex justify-center mb-4 items-center text-center rounded">
+                    <h3 className="font-jakarta font-medium text-[#6132fd]">
+                      {level}
+                    </h3>
                   </div>
-                  <div>
-                    <span className="font-jakarta font-semibold text-[16px]">
-                      3 Month
-                    </span>
-                  </div>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div>
-                    <MdStickyNote2 className="!text-[#00C2FB] text-[24px] font-semibold" />
-                  </div>
-                  <div>
-                    <span className="font-jakarta font-semibold text-[16px]">
-                      {numberOfLectures} Lectures
-                    </span>
-                  </div>
-                </div>
-              </div>
 
+                  <div className="mb-3">
+                    <h2 className="font-jakarta font-bold text-2xl"> {name}</h2>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <div className="flex gap-2 items-center ">
+                      <div>
+                        <MdOutlineWatchLater className="text-[#EC455A] text-[23px] font-semibold" />
+                      </div>
+                      <div>
+                        <span className="font-jakarta font-semibold text-[16px]">
+                          3 Month
+                        </span>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div>
+                        <MdStickyNote2 className="!text-[#00C2FB] text-[24px] font-semibold" />
+                      </div>
+                      <div>
+                        <span className="font-jakarta font-semibold text-[16px]">
+                          {numberOfLectures} Lectures
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Link>
               <div className="flex justify-between items-center border-t-2 mt-5 border-[#CECECE] pt-5">
                 <div className="flex justify-between gap-2 items-center">
                   <ReactStar
@@ -107,7 +111,7 @@ const BootCampsCard = ({
                     {ratingsAverage}
                   </span>
                 </div>
-                <div>
+                <div className="z-50">
                   {isAuthorized(email, refresh) ? (
                     !roles.includes("instructor") && (
                       <button
